@@ -1,7 +1,6 @@
 C:\Users\hamaguchi\Source\Repos\yt-win-scraping\bin\Debug\yt-win-scraping.exe.config
 C:\Users\hamaguchi\Source\Repos\yt-win-scraping\bin\Debug\yt-win-scraping.exe
 C:\Users\hamaguchi\Source\Repos\yt-win-scraping\bin\Debug\yt-win-scraping.pdb
-C:\Users\hamaguchi\Source\Repos\yt-win-scraping\bin\Debug\yt-win-scraping.xml
 C:\Users\hamaguchi\Source\Repos\yt-win-scraping\bin\Debug\HtmlAgilityPack.dll
 C:\Users\hamaguchi\Source\Repos\yt-win-scraping\bin\Debug\HtmlAgilityPack.pdb
 C:\Users\hamaguchi\Source\Repos\yt-win-scraping\bin\Debug\HtmlAgilityPack.xml
@@ -10,7 +9,6 @@ C:\Users\hamaguchi\Source\Repos\yt-win-scraping\obj\Debug\yt-win-scraping.vbproj
 C:\Users\hamaguchi\Source\Repos\yt-win-scraping\obj\Debug\yt-win-scraping.vbproj.CoreCompileInputs.cache
 C:\Users\hamaguchi\Source\Repos\yt-win-scraping\obj\Debug\yt-win-scraping.vbproj.CopyComplete
 C:\Users\hamaguchi\Source\Repos\yt-win-scraping\obj\Debug\yt-win-scraping.exe
-C:\Users\hamaguchi\Source\Repos\yt-win-scraping\obj\Debug\yt-win-scraping.xml
 C:\Users\hamaguchi\Source\Repos\yt-win-scraping\obj\Debug\yt-win-scraping.pdb
 C:\Users\hamaguchi\Source\Repos\yt-win-scraping\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\hamaguchi\Source\Repos\yt-win-scraping\bin\Debug\System.Buffers.dll
