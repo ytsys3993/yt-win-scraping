@@ -11,7 +11,10 @@
     <Setting Name="StartDateTime" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="MaxUser" Type="System.String" Scope="User">
+    <Setting Name="LoginUser" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="LoginPassword" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
   </Settings>

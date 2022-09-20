@@ -28,12 +28,22 @@ Namespace My
         End Property
 
         <Global.System.Configuration.UserScopedSettingAttribute()>
-        Public Property MaisuList() As System.Collections.Generic.List(Of String)
+        Public Property amountList() As System.Collections.Generic.List(Of String)
             Get
-                Return CType(Me("MaisuList"), System.Collections.Generic.List(Of String))
+                Return CType(Me("amountList"), System.Collections.Generic.List(Of String))
             End Get
             Set(ByVal value As System.Collections.Generic.List(Of String))
-                Me("MaisuList") = value
+                Me("amountList") = value
+            End Set
+        End Property
+
+        <Global.System.Configuration.UserScopedSettingAttribute()>
+        Public Property maisuList() As System.Collections.Generic.List(Of String)
+            Get
+                Return CType(Me("maisuList"), System.Collections.Generic.List(Of String))
+            End Get
+            Set(ByVal value As System.Collections.Generic.List(Of String))
+                Me("maisuList") = value
             End Set
         End Property
     End Class

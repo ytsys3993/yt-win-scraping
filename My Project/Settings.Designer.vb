@@ -93,12 +93,24 @@ Namespace My
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("")>  _
-        Public Property MaxUser() As String
+        Public Property LoginUser() As String
             Get
-                Return CType(Me("MaxUser"),String)
+                Return CType(Me("LoginUser"),String)
             End Get
             Set
-                Me("MaxUser") = value
+                Me("LoginUser") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property LoginPassword() As String
+            Get
+                Return CType(Me("LoginPassword"),String)
+            End Get
+            Set
+                Me("LoginPassword") = value
             End Set
         End Property
     End Class
