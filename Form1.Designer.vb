@@ -86,11 +86,27 @@ Partial Class Form1
         Me.imnMaisu15 = New System.Windows.Forms.NumericUpDown()
         Me.btnGetDisp = New System.Windows.Forms.Button()
         Me.Label21 = New System.Windows.Forms.Label()
-        Me.imtUser1 = New System.Windows.Forms.TextBox()
         Me.imtPassword1 = New System.Windows.Forms.TextBox()
         Me.btnDIspPassword = New System.Windows.Forms.Button()
         Me.grpTicket = New System.Windows.Forms.GroupBox()
+        Me.imtAmount15 = New System.Windows.Forms.TextBox()
+        Me.imtAmount12 = New System.Windows.Forms.TextBox()
+        Me.imtAmount6 = New System.Windows.Forms.TextBox()
+        Me.imtAmount9 = New System.Windows.Forms.TextBox()
+        Me.imtAmount3 = New System.Windows.Forms.TextBox()
+        Me.imtAmount14 = New System.Windows.Forms.TextBox()
+        Me.imtAmount11 = New System.Windows.Forms.TextBox()
+        Me.imtAmount5 = New System.Windows.Forms.TextBox()
+        Me.imtAmount8 = New System.Windows.Forms.TextBox()
+        Me.imtAmount2 = New System.Windows.Forms.TextBox()
+        Me.imtAmount13 = New System.Windows.Forms.TextBox()
+        Me.imtAmount10 = New System.Windows.Forms.TextBox()
+        Me.imtAmount4 = New System.Windows.Forms.TextBox()
+        Me.imtAmount7 = New System.Windows.Forms.TextBox()
+        Me.imtAmount1 = New System.Windows.Forms.TextBox()
         Me.grpLogin = New System.Windows.Forms.GroupBox()
+        Me.cmbUser = New System.Windows.Forms.ComboBox()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.grpCommon = New System.Windows.Forms.GroupBox()
         Me.chkTest = New System.Windows.Forms.RadioButton()
         Me.chkProd = New System.Windows.Forms.RadioButton()
@@ -101,21 +117,11 @@ Partial Class Form1
         Me.btnReserve = New System.Windows.Forms.Button()
         Me.btnOpenFolder = New System.Windows.Forms.Button()
         Me.grpURL = New System.Windows.Forms.GroupBox()
-        Me.imtAmount1 = New System.Windows.Forms.TextBox()
-        Me.imtAmount2 = New System.Windows.Forms.TextBox()
-        Me.imtAmount3 = New System.Windows.Forms.TextBox()
-        Me.imtAmount4 = New System.Windows.Forms.TextBox()
-        Me.imtAmount5 = New System.Windows.Forms.TextBox()
-        Me.imtAmount6 = New System.Windows.Forms.TextBox()
-        Me.imtAmount7 = New System.Windows.Forms.TextBox()
-        Me.imtAmount10 = New System.Windows.Forms.TextBox()
-        Me.imtAmount8 = New System.Windows.Forms.TextBox()
-        Me.imtAmount11 = New System.Windows.Forms.TextBox()
-        Me.imtAmount9 = New System.Windows.Forms.TextBox()
-        Me.imtAmount12 = New System.Windows.Forms.TextBox()
-        Me.imtAmount13 = New System.Windows.Forms.TextBox()
-        Me.imtAmount14 = New System.Windows.Forms.TextBox()
-        Me.imtAmount15 = New System.Windows.Forms.TextBox()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.cmbAnswer = New System.Windows.Forms.ComboBox()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.cmbBrowse = New System.Windows.Forms.ComboBox()
         CType(Me.imnMaisu1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.imnMaisu2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.imnMaisu3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -135,6 +141,7 @@ Partial Class Form1
         Me.grpLogin.SuspendLayout()
         Me.grpCommon.SuspendLayout()
         Me.grpURL.SuspendLayout()
+        Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'imtURL
@@ -142,13 +149,13 @@ Partial Class Form1
         Me.imtURL.Location = New System.Drawing.Point(15, 17)
         Me.imtURL.Margin = New System.Windows.Forms.Padding(2)
         Me.imtURL.Name = "imtURL"
-        Me.imtURL.Size = New System.Drawing.Size(560, 19)
+        Me.imtURL.Size = New System.Drawing.Size(489, 19)
         Me.imtURL.TabIndex = 0
         '
         'imtTicketName1
         '
         Me.imtTicketName1.ImeMode = System.Windows.Forms.ImeMode.Hiragana
-        Me.imtTicketName1.Location = New System.Drawing.Point(44, 23)
+        Me.imtTicketName1.Location = New System.Drawing.Point(39, 23)
         Me.imtTicketName1.Margin = New System.Windows.Forms.Padding(2)
         Me.imtTicketName1.Name = "imtTicketName1"
         Me.imtTicketName1.Size = New System.Drawing.Size(173, 19)
@@ -168,15 +175,15 @@ Partial Class Form1
         '
         Me.imtTicketId1.Enabled = False
         Me.imtTicketId1.ImeMode = System.Windows.Forms.ImeMode.Off
-        Me.imtTicketId1.Location = New System.Drawing.Point(221, 23)
+        Me.imtTicketId1.Location = New System.Drawing.Point(216, 23)
         Me.imtTicketId1.Margin = New System.Windows.Forms.Padding(2)
         Me.imtTicketId1.Name = "imtTicketId1"
-        Me.imtTicketId1.Size = New System.Drawing.Size(57, 19)
+        Me.imtTicketId1.Size = New System.Drawing.Size(45, 19)
         Me.imtTicketId1.TabIndex = 4
         '
         'imnMaisu1
         '
-        Me.imnMaisu1.Location = New System.Drawing.Point(343, 24)
+        Me.imnMaisu1.Location = New System.Drawing.Point(314, 24)
         Me.imnMaisu1.Margin = New System.Windows.Forms.Padding(2)
         Me.imnMaisu1.Maximum = New Decimal(New Integer() {2, 0, 0, 0})
         Me.imnMaisu1.Name = "imnMaisu1"
@@ -185,7 +192,7 @@ Partial Class Form1
         '
         'imnMaisu2
         '
-        Me.imnMaisu2.Location = New System.Drawing.Point(343, 46)
+        Me.imnMaisu2.Location = New System.Drawing.Point(314, 46)
         Me.imnMaisu2.Margin = New System.Windows.Forms.Padding(2)
         Me.imnMaisu2.Maximum = New Decimal(New Integer() {2, 0, 0, 0})
         Me.imnMaisu2.Name = "imnMaisu2"
@@ -196,10 +203,10 @@ Partial Class Form1
         '
         Me.imtTicketId2.Enabled = False
         Me.imtTicketId2.ImeMode = System.Windows.Forms.ImeMode.Off
-        Me.imtTicketId2.Location = New System.Drawing.Point(221, 46)
+        Me.imtTicketId2.Location = New System.Drawing.Point(216, 46)
         Me.imtTicketId2.Margin = New System.Windows.Forms.Padding(2)
         Me.imtTicketId2.Name = "imtTicketId2"
-        Me.imtTicketId2.Size = New System.Drawing.Size(57, 19)
+        Me.imtTicketId2.Size = New System.Drawing.Size(45, 19)
         Me.imtTicketId2.TabIndex = 8
         '
         'Label3
@@ -215,7 +222,7 @@ Partial Class Form1
         'imtTicketName2
         '
         Me.imtTicketName2.ImeMode = System.Windows.Forms.ImeMode.Hiragana
-        Me.imtTicketName2.Location = New System.Drawing.Point(44, 46)
+        Me.imtTicketName2.Location = New System.Drawing.Point(39, 46)
         Me.imtTicketName2.Margin = New System.Windows.Forms.Padding(2)
         Me.imtTicketName2.Name = "imtTicketName2"
         Me.imtTicketName2.Size = New System.Drawing.Size(173, 19)
@@ -224,7 +231,7 @@ Partial Class Form1
         'imtTicketName3
         '
         Me.imtTicketName3.ImeMode = System.Windows.Forms.ImeMode.Hiragana
-        Me.imtTicketName3.Location = New System.Drawing.Point(44, 68)
+        Me.imtTicketName3.Location = New System.Drawing.Point(39, 68)
         Me.imtTicketName3.Margin = New System.Windows.Forms.Padding(2)
         Me.imtTicketName3.Name = "imtTicketName3"
         Me.imtTicketName3.Size = New System.Drawing.Size(173, 19)
@@ -233,7 +240,7 @@ Partial Class Form1
         'imtTicketName4
         '
         Me.imtTicketName4.ImeMode = System.Windows.Forms.ImeMode.Hiragana
-        Me.imtTicketName4.Location = New System.Drawing.Point(44, 90)
+        Me.imtTicketName4.Location = New System.Drawing.Point(39, 90)
         Me.imtTicketName4.Margin = New System.Windows.Forms.Padding(2)
         Me.imtTicketName4.Name = "imtTicketName4"
         Me.imtTicketName4.Size = New System.Drawing.Size(173, 19)
@@ -242,7 +249,7 @@ Partial Class Form1
         'imtTicketName5
         '
         Me.imtTicketName5.ImeMode = System.Windows.Forms.ImeMode.Hiragana
-        Me.imtTicketName5.Location = New System.Drawing.Point(44, 113)
+        Me.imtTicketName5.Location = New System.Drawing.Point(39, 113)
         Me.imtTicketName5.Margin = New System.Windows.Forms.Padding(2)
         Me.imtTicketName5.Name = "imtTicketName5"
         Me.imtTicketName5.Size = New System.Drawing.Size(173, 19)
@@ -251,7 +258,7 @@ Partial Class Form1
         'imtTicketName6
         '
         Me.imtTicketName6.ImeMode = System.Windows.Forms.ImeMode.Hiragana
-        Me.imtTicketName6.Location = New System.Drawing.Point(44, 135)
+        Me.imtTicketName6.Location = New System.Drawing.Point(39, 135)
         Me.imtTicketName6.Margin = New System.Windows.Forms.Padding(2)
         Me.imtTicketName6.Name = "imtTicketName6"
         Me.imtTicketName6.Size = New System.Drawing.Size(173, 19)
@@ -310,7 +317,7 @@ Partial Class Form1
         'imtTicketName7
         '
         Me.imtTicketName7.ImeMode = System.Windows.Forms.ImeMode.Hiragana
-        Me.imtTicketName7.Location = New System.Drawing.Point(44, 158)
+        Me.imtTicketName7.Location = New System.Drawing.Point(39, 158)
         Me.imtTicketName7.Margin = New System.Windows.Forms.Padding(2)
         Me.imtTicketName7.Name = "imtTicketName7"
         Me.imtTicketName7.Size = New System.Drawing.Size(173, 19)
@@ -319,7 +326,7 @@ Partial Class Form1
         'imtTicketName8
         '
         Me.imtTicketName8.ImeMode = System.Windows.Forms.ImeMode.Hiragana
-        Me.imtTicketName8.Location = New System.Drawing.Point(44, 181)
+        Me.imtTicketName8.Location = New System.Drawing.Point(39, 181)
         Me.imtTicketName8.Margin = New System.Windows.Forms.Padding(2)
         Me.imtTicketName8.Name = "imtTicketName8"
         Me.imtTicketName8.Size = New System.Drawing.Size(173, 19)
@@ -328,7 +335,7 @@ Partial Class Form1
         'imtTicketName9
         '
         Me.imtTicketName9.ImeMode = System.Windows.Forms.ImeMode.Hiragana
-        Me.imtTicketName9.Location = New System.Drawing.Point(44, 204)
+        Me.imtTicketName9.Location = New System.Drawing.Point(39, 204)
         Me.imtTicketName9.Margin = New System.Windows.Forms.Padding(2)
         Me.imtTicketName9.Name = "imtTicketName9"
         Me.imtTicketName9.Size = New System.Drawing.Size(173, 19)
@@ -337,7 +344,7 @@ Partial Class Form1
         'imtTicketName10
         '
         Me.imtTicketName10.ImeMode = System.Windows.Forms.ImeMode.Hiragana
-        Me.imtTicketName10.Location = New System.Drawing.Point(44, 226)
+        Me.imtTicketName10.Location = New System.Drawing.Point(39, 226)
         Me.imtTicketName10.Margin = New System.Windows.Forms.Padding(2)
         Me.imtTicketName10.Name = "imtTicketName10"
         Me.imtTicketName10.Size = New System.Drawing.Size(173, 19)
@@ -346,7 +353,7 @@ Partial Class Form1
         'imtTicketName11
         '
         Me.imtTicketName11.ImeMode = System.Windows.Forms.ImeMode.Hiragana
-        Me.imtTicketName11.Location = New System.Drawing.Point(44, 249)
+        Me.imtTicketName11.Location = New System.Drawing.Point(39, 249)
         Me.imtTicketName11.Margin = New System.Windows.Forms.Padding(2)
         Me.imtTicketName11.Name = "imtTicketName11"
         Me.imtTicketName11.Size = New System.Drawing.Size(173, 19)
@@ -355,7 +362,7 @@ Partial Class Form1
         'imtTicketName12
         '
         Me.imtTicketName12.ImeMode = System.Windows.Forms.ImeMode.Hiragana
-        Me.imtTicketName12.Location = New System.Drawing.Point(44, 271)
+        Me.imtTicketName12.Location = New System.Drawing.Point(39, 271)
         Me.imtTicketName12.Margin = New System.Windows.Forms.Padding(2)
         Me.imtTicketName12.Name = "imtTicketName12"
         Me.imtTicketName12.Size = New System.Drawing.Size(173, 19)
@@ -364,7 +371,7 @@ Partial Class Form1
         'imtTicketName13
         '
         Me.imtTicketName13.ImeMode = System.Windows.Forms.ImeMode.Hiragana
-        Me.imtTicketName13.Location = New System.Drawing.Point(44, 293)
+        Me.imtTicketName13.Location = New System.Drawing.Point(39, 293)
         Me.imtTicketName13.Margin = New System.Windows.Forms.Padding(2)
         Me.imtTicketName13.Name = "imtTicketName13"
         Me.imtTicketName13.Size = New System.Drawing.Size(173, 19)
@@ -373,7 +380,7 @@ Partial Class Form1
         'imtTicketName14
         '
         Me.imtTicketName14.ImeMode = System.Windows.Forms.ImeMode.Hiragana
-        Me.imtTicketName14.Location = New System.Drawing.Point(44, 316)
+        Me.imtTicketName14.Location = New System.Drawing.Point(39, 316)
         Me.imtTicketName14.Margin = New System.Windows.Forms.Padding(2)
         Me.imtTicketName14.Name = "imtTicketName14"
         Me.imtTicketName14.Size = New System.Drawing.Size(173, 19)
@@ -452,7 +459,7 @@ Partial Class Form1
         'imtTicketName15
         '
         Me.imtTicketName15.ImeMode = System.Windows.Forms.ImeMode.Hiragana
-        Me.imtTicketName15.Location = New System.Drawing.Point(44, 338)
+        Me.imtTicketName15.Location = New System.Drawing.Point(39, 338)
         Me.imtTicketName15.Margin = New System.Windows.Forms.Padding(2)
         Me.imtTicketName15.Name = "imtTicketName15"
         Me.imtTicketName15.Size = New System.Drawing.Size(173, 19)
@@ -472,135 +479,135 @@ Partial Class Form1
         '
         Me.imtTicketId3.Enabled = False
         Me.imtTicketId3.ImeMode = System.Windows.Forms.ImeMode.Off
-        Me.imtTicketId3.Location = New System.Drawing.Point(221, 68)
+        Me.imtTicketId3.Location = New System.Drawing.Point(216, 68)
         Me.imtTicketId3.Margin = New System.Windows.Forms.Padding(2)
         Me.imtTicketId3.Name = "imtTicketId3"
-        Me.imtTicketId3.Size = New System.Drawing.Size(57, 19)
+        Me.imtTicketId3.Size = New System.Drawing.Size(45, 19)
         Me.imtTicketId3.TabIndex = 8
         '
         'imtTicketId4
         '
         Me.imtTicketId4.Enabled = False
         Me.imtTicketId4.ImeMode = System.Windows.Forms.ImeMode.Off
-        Me.imtTicketId4.Location = New System.Drawing.Point(221, 90)
+        Me.imtTicketId4.Location = New System.Drawing.Point(216, 90)
         Me.imtTicketId4.Margin = New System.Windows.Forms.Padding(2)
         Me.imtTicketId4.Name = "imtTicketId4"
-        Me.imtTicketId4.Size = New System.Drawing.Size(57, 19)
+        Me.imtTicketId4.Size = New System.Drawing.Size(45, 19)
         Me.imtTicketId4.TabIndex = 8
         '
         'imtTicketId5
         '
         Me.imtTicketId5.Enabled = False
         Me.imtTicketId5.ImeMode = System.Windows.Forms.ImeMode.Off
-        Me.imtTicketId5.Location = New System.Drawing.Point(221, 113)
+        Me.imtTicketId5.Location = New System.Drawing.Point(216, 113)
         Me.imtTicketId5.Margin = New System.Windows.Forms.Padding(2)
         Me.imtTicketId5.Name = "imtTicketId5"
-        Me.imtTicketId5.Size = New System.Drawing.Size(57, 19)
+        Me.imtTicketId5.Size = New System.Drawing.Size(45, 19)
         Me.imtTicketId5.TabIndex = 8
         '
         'imtTicketId6
         '
         Me.imtTicketId6.Enabled = False
         Me.imtTicketId6.ImeMode = System.Windows.Forms.ImeMode.Off
-        Me.imtTicketId6.Location = New System.Drawing.Point(221, 135)
+        Me.imtTicketId6.Location = New System.Drawing.Point(216, 135)
         Me.imtTicketId6.Margin = New System.Windows.Forms.Padding(2)
         Me.imtTicketId6.Name = "imtTicketId6"
-        Me.imtTicketId6.Size = New System.Drawing.Size(57, 19)
+        Me.imtTicketId6.Size = New System.Drawing.Size(45, 19)
         Me.imtTicketId6.TabIndex = 8
         '
         'imtTicketId7
         '
         Me.imtTicketId7.Enabled = False
         Me.imtTicketId7.ImeMode = System.Windows.Forms.ImeMode.Off
-        Me.imtTicketId7.Location = New System.Drawing.Point(221, 158)
+        Me.imtTicketId7.Location = New System.Drawing.Point(216, 158)
         Me.imtTicketId7.Margin = New System.Windows.Forms.Padding(2)
         Me.imtTicketId7.Name = "imtTicketId7"
-        Me.imtTicketId7.Size = New System.Drawing.Size(57, 19)
+        Me.imtTicketId7.Size = New System.Drawing.Size(45, 19)
         Me.imtTicketId7.TabIndex = 8
         '
         'imtTicketId8
         '
         Me.imtTicketId8.Enabled = False
         Me.imtTicketId8.ImeMode = System.Windows.Forms.ImeMode.Off
-        Me.imtTicketId8.Location = New System.Drawing.Point(221, 181)
+        Me.imtTicketId8.Location = New System.Drawing.Point(216, 181)
         Me.imtTicketId8.Margin = New System.Windows.Forms.Padding(2)
         Me.imtTicketId8.Name = "imtTicketId8"
-        Me.imtTicketId8.Size = New System.Drawing.Size(57, 19)
+        Me.imtTicketId8.Size = New System.Drawing.Size(45, 19)
         Me.imtTicketId8.TabIndex = 8
         '
         'imtTicketId9
         '
         Me.imtTicketId9.Enabled = False
         Me.imtTicketId9.ImeMode = System.Windows.Forms.ImeMode.Off
-        Me.imtTicketId9.Location = New System.Drawing.Point(221, 204)
+        Me.imtTicketId9.Location = New System.Drawing.Point(216, 204)
         Me.imtTicketId9.Margin = New System.Windows.Forms.Padding(2)
         Me.imtTicketId9.Name = "imtTicketId9"
-        Me.imtTicketId9.Size = New System.Drawing.Size(57, 19)
+        Me.imtTicketId9.Size = New System.Drawing.Size(45, 19)
         Me.imtTicketId9.TabIndex = 8
         '
         'imtTicketId10
         '
         Me.imtTicketId10.Enabled = False
         Me.imtTicketId10.ImeMode = System.Windows.Forms.ImeMode.Off
-        Me.imtTicketId10.Location = New System.Drawing.Point(221, 226)
+        Me.imtTicketId10.Location = New System.Drawing.Point(216, 226)
         Me.imtTicketId10.Margin = New System.Windows.Forms.Padding(2)
         Me.imtTicketId10.Name = "imtTicketId10"
-        Me.imtTicketId10.Size = New System.Drawing.Size(57, 19)
+        Me.imtTicketId10.Size = New System.Drawing.Size(45, 19)
         Me.imtTicketId10.TabIndex = 8
         '
         'imtTicketId15
         '
         Me.imtTicketId15.Enabled = False
         Me.imtTicketId15.ImeMode = System.Windows.Forms.ImeMode.Off
-        Me.imtTicketId15.Location = New System.Drawing.Point(221, 338)
+        Me.imtTicketId15.Location = New System.Drawing.Point(216, 338)
         Me.imtTicketId15.Margin = New System.Windows.Forms.Padding(2)
         Me.imtTicketId15.Name = "imtTicketId15"
-        Me.imtTicketId15.Size = New System.Drawing.Size(57, 19)
+        Me.imtTicketId15.Size = New System.Drawing.Size(45, 19)
         Me.imtTicketId15.TabIndex = 12
         '
         'imtTicketId14
         '
         Me.imtTicketId14.Enabled = False
         Me.imtTicketId14.ImeMode = System.Windows.Forms.ImeMode.Off
-        Me.imtTicketId14.Location = New System.Drawing.Point(221, 316)
+        Me.imtTicketId14.Location = New System.Drawing.Point(216, 316)
         Me.imtTicketId14.Margin = New System.Windows.Forms.Padding(2)
         Me.imtTicketId14.Name = "imtTicketId14"
-        Me.imtTicketId14.Size = New System.Drawing.Size(57, 19)
+        Me.imtTicketId14.Size = New System.Drawing.Size(45, 19)
         Me.imtTicketId14.TabIndex = 13
         '
         'imtTicketId12
         '
         Me.imtTicketId12.Enabled = False
         Me.imtTicketId12.ImeMode = System.Windows.Forms.ImeMode.Off
-        Me.imtTicketId12.Location = New System.Drawing.Point(221, 271)
+        Me.imtTicketId12.Location = New System.Drawing.Point(216, 271)
         Me.imtTicketId12.Margin = New System.Windows.Forms.Padding(2)
         Me.imtTicketId12.Name = "imtTicketId12"
-        Me.imtTicketId12.Size = New System.Drawing.Size(57, 19)
+        Me.imtTicketId12.Size = New System.Drawing.Size(45, 19)
         Me.imtTicketId12.TabIndex = 14
         '
         'imtTicketId11
         '
         Me.imtTicketId11.Enabled = False
         Me.imtTicketId11.ImeMode = System.Windows.Forms.ImeMode.Off
-        Me.imtTicketId11.Location = New System.Drawing.Point(221, 249)
+        Me.imtTicketId11.Location = New System.Drawing.Point(216, 249)
         Me.imtTicketId11.Margin = New System.Windows.Forms.Padding(2)
         Me.imtTicketId11.Name = "imtTicketId11"
-        Me.imtTicketId11.Size = New System.Drawing.Size(57, 19)
+        Me.imtTicketId11.Size = New System.Drawing.Size(45, 19)
         Me.imtTicketId11.TabIndex = 15
         '
         'imtTicketId13
         '
         Me.imtTicketId13.Enabled = False
         Me.imtTicketId13.ImeMode = System.Windows.Forms.ImeMode.Off
-        Me.imtTicketId13.Location = New System.Drawing.Point(221, 293)
+        Me.imtTicketId13.Location = New System.Drawing.Point(216, 293)
         Me.imtTicketId13.Margin = New System.Windows.Forms.Padding(2)
         Me.imtTicketId13.Name = "imtTicketId13"
-        Me.imtTicketId13.Size = New System.Drawing.Size(57, 19)
+        Me.imtTicketId13.Size = New System.Drawing.Size(45, 19)
         Me.imtTicketId13.TabIndex = 16
         '
         'imnMaisu3
         '
-        Me.imnMaisu3.Location = New System.Drawing.Point(343, 68)
+        Me.imnMaisu3.Location = New System.Drawing.Point(314, 68)
         Me.imnMaisu3.Margin = New System.Windows.Forms.Padding(2)
         Me.imnMaisu3.Maximum = New Decimal(New Integer() {2, 0, 0, 0})
         Me.imnMaisu3.Name = "imnMaisu3"
@@ -609,7 +616,7 @@ Partial Class Form1
         '
         'imnMaisu4
         '
-        Me.imnMaisu4.Location = New System.Drawing.Point(343, 90)
+        Me.imnMaisu4.Location = New System.Drawing.Point(314, 90)
         Me.imnMaisu4.Margin = New System.Windows.Forms.Padding(2)
         Me.imnMaisu4.Maximum = New Decimal(New Integer() {2, 0, 0, 0})
         Me.imnMaisu4.Name = "imnMaisu4"
@@ -618,7 +625,7 @@ Partial Class Form1
         '
         'imnMaisu5
         '
-        Me.imnMaisu5.Location = New System.Drawing.Point(343, 113)
+        Me.imnMaisu5.Location = New System.Drawing.Point(314, 113)
         Me.imnMaisu5.Margin = New System.Windows.Forms.Padding(2)
         Me.imnMaisu5.Maximum = New Decimal(New Integer() {2, 0, 0, 0})
         Me.imnMaisu5.Name = "imnMaisu5"
@@ -627,7 +634,7 @@ Partial Class Form1
         '
         'imnMaisu6
         '
-        Me.imnMaisu6.Location = New System.Drawing.Point(343, 134)
+        Me.imnMaisu6.Location = New System.Drawing.Point(314, 134)
         Me.imnMaisu6.Margin = New System.Windows.Forms.Padding(2)
         Me.imnMaisu6.Maximum = New Decimal(New Integer() {2, 0, 0, 0})
         Me.imnMaisu6.Name = "imnMaisu6"
@@ -636,7 +643,7 @@ Partial Class Form1
         '
         'imnMaisu7
         '
-        Me.imnMaisu7.Location = New System.Drawing.Point(343, 158)
+        Me.imnMaisu7.Location = New System.Drawing.Point(314, 158)
         Me.imnMaisu7.Margin = New System.Windows.Forms.Padding(2)
         Me.imnMaisu7.Maximum = New Decimal(New Integer() {2, 0, 0, 0})
         Me.imnMaisu7.Name = "imnMaisu7"
@@ -645,7 +652,7 @@ Partial Class Form1
         '
         'imnMaisu10
         '
-        Me.imnMaisu10.Location = New System.Drawing.Point(343, 227)
+        Me.imnMaisu10.Location = New System.Drawing.Point(314, 227)
         Me.imnMaisu10.Margin = New System.Windows.Forms.Padding(2)
         Me.imnMaisu10.Maximum = New Decimal(New Integer() {2, 0, 0, 0})
         Me.imnMaisu10.Name = "imnMaisu10"
@@ -654,7 +661,7 @@ Partial Class Form1
         '
         'imnMaisu8
         '
-        Me.imnMaisu8.Location = New System.Drawing.Point(343, 182)
+        Me.imnMaisu8.Location = New System.Drawing.Point(314, 182)
         Me.imnMaisu8.Margin = New System.Windows.Forms.Padding(2)
         Me.imnMaisu8.Maximum = New Decimal(New Integer() {2, 0, 0, 0})
         Me.imnMaisu8.Name = "imnMaisu8"
@@ -663,7 +670,7 @@ Partial Class Form1
         '
         'imnMaisu11
         '
-        Me.imnMaisu11.Location = New System.Drawing.Point(343, 249)
+        Me.imnMaisu11.Location = New System.Drawing.Point(314, 249)
         Me.imnMaisu11.Margin = New System.Windows.Forms.Padding(2)
         Me.imnMaisu11.Maximum = New Decimal(New Integer() {2, 0, 0, 0})
         Me.imnMaisu11.Name = "imnMaisu11"
@@ -672,7 +679,7 @@ Partial Class Form1
         '
         'imnMaisu9
         '
-        Me.imnMaisu9.Location = New System.Drawing.Point(343, 204)
+        Me.imnMaisu9.Location = New System.Drawing.Point(314, 204)
         Me.imnMaisu9.Margin = New System.Windows.Forms.Padding(2)
         Me.imnMaisu9.Maximum = New Decimal(New Integer() {2, 0, 0, 0})
         Me.imnMaisu9.Name = "imnMaisu9"
@@ -681,7 +688,7 @@ Partial Class Form1
         '
         'imnMaisu12
         '
-        Me.imnMaisu12.Location = New System.Drawing.Point(343, 271)
+        Me.imnMaisu12.Location = New System.Drawing.Point(314, 271)
         Me.imnMaisu12.Margin = New System.Windows.Forms.Padding(2)
         Me.imnMaisu12.Maximum = New Decimal(New Integer() {2, 0, 0, 0})
         Me.imnMaisu12.Name = "imnMaisu12"
@@ -690,7 +697,7 @@ Partial Class Form1
         '
         'imnMaisu13
         '
-        Me.imnMaisu13.Location = New System.Drawing.Point(343, 294)
+        Me.imnMaisu13.Location = New System.Drawing.Point(314, 294)
         Me.imnMaisu13.Margin = New System.Windows.Forms.Padding(2)
         Me.imnMaisu13.Maximum = New Decimal(New Integer() {2, 0, 0, 0})
         Me.imnMaisu13.Name = "imnMaisu13"
@@ -699,7 +706,7 @@ Partial Class Form1
         '
         'imnMaisu14
         '
-        Me.imnMaisu14.Location = New System.Drawing.Point(343, 316)
+        Me.imnMaisu14.Location = New System.Drawing.Point(314, 316)
         Me.imnMaisu14.Margin = New System.Windows.Forms.Padding(2)
         Me.imnMaisu14.Maximum = New Decimal(New Integer() {2, 0, 0, 0})
         Me.imnMaisu14.Name = "imnMaisu14"
@@ -708,7 +715,7 @@ Partial Class Form1
         '
         'imnMaisu15
         '
-        Me.imnMaisu15.Location = New System.Drawing.Point(343, 339)
+        Me.imnMaisu15.Location = New System.Drawing.Point(314, 339)
         Me.imnMaisu15.Margin = New System.Windows.Forms.Padding(2)
         Me.imnMaisu15.Maximum = New Decimal(New Integer() {2, 0, 0, 0})
         Me.imnMaisu15.Name = "imnMaisu15"
@@ -717,7 +724,7 @@ Partial Class Form1
         '
         'btnGetDisp
         '
-        Me.btnGetDisp.Location = New System.Drawing.Point(652, 17)
+        Me.btnGetDisp.Location = New System.Drawing.Point(518, 17)
         Me.btnGetDisp.Margin = New System.Windows.Forms.Padding(2)
         Me.btnGetDisp.Name = "btnGetDisp"
         Me.btnGetDisp.Size = New System.Drawing.Size(56, 19)
@@ -728,35 +735,25 @@ Partial Class Form1
         'Label21
         '
         Me.Label21.AutoSize = True
-        Me.Label21.Location = New System.Drawing.Point(14, 26)
+        Me.Label21.Location = New System.Drawing.Point(14, 23)
         Me.Label21.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(11, 12)
+        Me.Label21.Size = New System.Drawing.Size(16, 12)
         Me.Label21.TabIndex = 19
-        Me.Label21.Text = "1"
-        '
-        'imtUser1
-        '
-        Me.imtUser1.ImeMode = System.Windows.Forms.ImeMode.Hiragana
-        Me.imtUser1.Location = New System.Drawing.Point(44, 23)
-        Me.imtUser1.Margin = New System.Windows.Forms.Padding(2)
-        Me.imtUser1.Name = "imtUser1"
-        Me.imtUser1.Size = New System.Drawing.Size(168, 19)
-        Me.imtUser1.TabIndex = 18
+        Me.Label21.Text = "ID"
         '
         'imtPassword1
         '
         Me.imtPassword1.ImeMode = System.Windows.Forms.ImeMode.Hiragana
-        Me.imtPassword1.Location = New System.Drawing.Point(215, 23)
+        Me.imtPassword1.Location = New System.Drawing.Point(44, 46)
         Me.imtPassword1.Margin = New System.Windows.Forms.Padding(2)
         Me.imtPassword1.Name = "imtPassword1"
-        Me.imtPassword1.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.imtPassword1.Size = New System.Drawing.Size(98, 19)
         Me.imtPassword1.TabIndex = 18
         '
         'btnDIspPassword
         '
-        Me.btnDIspPassword.Location = New System.Drawing.Point(257, 46)
+        Me.btnDIspPassword.Location = New System.Drawing.Point(156, 46)
         Me.btnDIspPassword.Margin = New System.Windows.Forms.Padding(2)
         Me.btnDIspPassword.Name = "btnDIspPassword"
         Me.btnDIspPassword.Size = New System.Drawing.Size(56, 19)
@@ -845,39 +842,211 @@ Partial Class Form1
         Me.grpTicket.Margin = New System.Windows.Forms.Padding(2)
         Me.grpTicket.Name = "grpTicket"
         Me.grpTicket.Padding = New System.Windows.Forms.Padding(2)
-        Me.grpTicket.Size = New System.Drawing.Size(391, 369)
+        Me.grpTicket.Size = New System.Drawing.Size(358, 369)
         Me.grpTicket.TabIndex = 30
         Me.grpTicket.TabStop = False
         Me.grpTicket.Text = "チケット"
         '
+        'imtAmount15
+        '
+        Me.imtAmount15.Enabled = False
+        Me.imtAmount15.ImeMode = System.Windows.Forms.ImeMode.Off
+        Me.imtAmount15.Location = New System.Drawing.Point(265, 338)
+        Me.imtAmount15.Margin = New System.Windows.Forms.Padding(2)
+        Me.imtAmount15.Name = "imtAmount15"
+        Me.imtAmount15.Size = New System.Drawing.Size(45, 19)
+        Me.imtAmount15.TabIndex = 17
+        '
+        'imtAmount12
+        '
+        Me.imtAmount12.Enabled = False
+        Me.imtAmount12.ImeMode = System.Windows.Forms.ImeMode.Off
+        Me.imtAmount12.Location = New System.Drawing.Point(265, 271)
+        Me.imtAmount12.Margin = New System.Windows.Forms.Padding(2)
+        Me.imtAmount12.Name = "imtAmount12"
+        Me.imtAmount12.Size = New System.Drawing.Size(45, 19)
+        Me.imtAmount12.TabIndex = 17
+        '
+        'imtAmount6
+        '
+        Me.imtAmount6.Enabled = False
+        Me.imtAmount6.ImeMode = System.Windows.Forms.ImeMode.Off
+        Me.imtAmount6.Location = New System.Drawing.Point(265, 135)
+        Me.imtAmount6.Margin = New System.Windows.Forms.Padding(2)
+        Me.imtAmount6.Name = "imtAmount6"
+        Me.imtAmount6.Size = New System.Drawing.Size(45, 19)
+        Me.imtAmount6.TabIndex = 17
+        '
+        'imtAmount9
+        '
+        Me.imtAmount9.Enabled = False
+        Me.imtAmount9.ImeMode = System.Windows.Forms.ImeMode.Off
+        Me.imtAmount9.Location = New System.Drawing.Point(265, 204)
+        Me.imtAmount9.Margin = New System.Windows.Forms.Padding(2)
+        Me.imtAmount9.Name = "imtAmount9"
+        Me.imtAmount9.Size = New System.Drawing.Size(45, 19)
+        Me.imtAmount9.TabIndex = 17
+        '
+        'imtAmount3
+        '
+        Me.imtAmount3.Enabled = False
+        Me.imtAmount3.ImeMode = System.Windows.Forms.ImeMode.Off
+        Me.imtAmount3.Location = New System.Drawing.Point(265, 68)
+        Me.imtAmount3.Margin = New System.Windows.Forms.Padding(2)
+        Me.imtAmount3.Name = "imtAmount3"
+        Me.imtAmount3.Size = New System.Drawing.Size(45, 19)
+        Me.imtAmount3.TabIndex = 17
+        '
+        'imtAmount14
+        '
+        Me.imtAmount14.Enabled = False
+        Me.imtAmount14.ImeMode = System.Windows.Forms.ImeMode.Off
+        Me.imtAmount14.Location = New System.Drawing.Point(265, 316)
+        Me.imtAmount14.Margin = New System.Windows.Forms.Padding(2)
+        Me.imtAmount14.Name = "imtAmount14"
+        Me.imtAmount14.Size = New System.Drawing.Size(45, 19)
+        Me.imtAmount14.TabIndex = 17
+        '
+        'imtAmount11
+        '
+        Me.imtAmount11.Enabled = False
+        Me.imtAmount11.ImeMode = System.Windows.Forms.ImeMode.Off
+        Me.imtAmount11.Location = New System.Drawing.Point(265, 249)
+        Me.imtAmount11.Margin = New System.Windows.Forms.Padding(2)
+        Me.imtAmount11.Name = "imtAmount11"
+        Me.imtAmount11.Size = New System.Drawing.Size(45, 19)
+        Me.imtAmount11.TabIndex = 17
+        '
+        'imtAmount5
+        '
+        Me.imtAmount5.Enabled = False
+        Me.imtAmount5.ImeMode = System.Windows.Forms.ImeMode.Off
+        Me.imtAmount5.Location = New System.Drawing.Point(265, 113)
+        Me.imtAmount5.Margin = New System.Windows.Forms.Padding(2)
+        Me.imtAmount5.Name = "imtAmount5"
+        Me.imtAmount5.Size = New System.Drawing.Size(45, 19)
+        Me.imtAmount5.TabIndex = 17
+        '
+        'imtAmount8
+        '
+        Me.imtAmount8.Enabled = False
+        Me.imtAmount8.ImeMode = System.Windows.Forms.ImeMode.Off
+        Me.imtAmount8.Location = New System.Drawing.Point(265, 181)
+        Me.imtAmount8.Margin = New System.Windows.Forms.Padding(2)
+        Me.imtAmount8.Name = "imtAmount8"
+        Me.imtAmount8.Size = New System.Drawing.Size(45, 19)
+        Me.imtAmount8.TabIndex = 17
+        '
+        'imtAmount2
+        '
+        Me.imtAmount2.Enabled = False
+        Me.imtAmount2.ImeMode = System.Windows.Forms.ImeMode.Off
+        Me.imtAmount2.Location = New System.Drawing.Point(265, 46)
+        Me.imtAmount2.Margin = New System.Windows.Forms.Padding(2)
+        Me.imtAmount2.Name = "imtAmount2"
+        Me.imtAmount2.Size = New System.Drawing.Size(45, 19)
+        Me.imtAmount2.TabIndex = 17
+        '
+        'imtAmount13
+        '
+        Me.imtAmount13.Enabled = False
+        Me.imtAmount13.ImeMode = System.Windows.Forms.ImeMode.Off
+        Me.imtAmount13.Location = New System.Drawing.Point(265, 293)
+        Me.imtAmount13.Margin = New System.Windows.Forms.Padding(2)
+        Me.imtAmount13.Name = "imtAmount13"
+        Me.imtAmount13.Size = New System.Drawing.Size(45, 19)
+        Me.imtAmount13.TabIndex = 17
+        '
+        'imtAmount10
+        '
+        Me.imtAmount10.Enabled = False
+        Me.imtAmount10.ImeMode = System.Windows.Forms.ImeMode.Off
+        Me.imtAmount10.Location = New System.Drawing.Point(265, 226)
+        Me.imtAmount10.Margin = New System.Windows.Forms.Padding(2)
+        Me.imtAmount10.Name = "imtAmount10"
+        Me.imtAmount10.Size = New System.Drawing.Size(45, 19)
+        Me.imtAmount10.TabIndex = 17
+        '
+        'imtAmount4
+        '
+        Me.imtAmount4.Enabled = False
+        Me.imtAmount4.ImeMode = System.Windows.Forms.ImeMode.Off
+        Me.imtAmount4.Location = New System.Drawing.Point(265, 90)
+        Me.imtAmount4.Margin = New System.Windows.Forms.Padding(2)
+        Me.imtAmount4.Name = "imtAmount4"
+        Me.imtAmount4.Size = New System.Drawing.Size(45, 19)
+        Me.imtAmount4.TabIndex = 17
+        '
+        'imtAmount7
+        '
+        Me.imtAmount7.Enabled = False
+        Me.imtAmount7.ImeMode = System.Windows.Forms.ImeMode.Off
+        Me.imtAmount7.Location = New System.Drawing.Point(265, 158)
+        Me.imtAmount7.Margin = New System.Windows.Forms.Padding(2)
+        Me.imtAmount7.Name = "imtAmount7"
+        Me.imtAmount7.Size = New System.Drawing.Size(45, 19)
+        Me.imtAmount7.TabIndex = 17
+        '
+        'imtAmount1
+        '
+        Me.imtAmount1.Enabled = False
+        Me.imtAmount1.ImeMode = System.Windows.Forms.ImeMode.Off
+        Me.imtAmount1.Location = New System.Drawing.Point(265, 23)
+        Me.imtAmount1.Margin = New System.Windows.Forms.Padding(2)
+        Me.imtAmount1.Name = "imtAmount1"
+        Me.imtAmount1.Size = New System.Drawing.Size(45, 19)
+        Me.imtAmount1.TabIndex = 17
+        '
         'grpLogin
         '
+        Me.grpLogin.Controls.Add(Me.cmbUser)
+        Me.grpLogin.Controls.Add(Me.Label1)
         Me.grpLogin.Controls.Add(Me.Label21)
-        Me.grpLogin.Controls.Add(Me.imtUser1)
         Me.grpLogin.Controls.Add(Me.btnDIspPassword)
         Me.grpLogin.Controls.Add(Me.imtPassword1)
-        Me.grpLogin.Location = New System.Drawing.Point(406, 64)
+        Me.grpLogin.Location = New System.Drawing.Point(373, 69)
         Me.grpLogin.Margin = New System.Windows.Forms.Padding(2)
         Me.grpLogin.Name = "grpLogin"
         Me.grpLogin.Padding = New System.Windows.Forms.Padding(2)
-        Me.grpLogin.Size = New System.Drawing.Size(332, 82)
+        Me.grpLogin.Size = New System.Drawing.Size(222, 82)
         Me.grpLogin.TabIndex = 31
         Me.grpLogin.TabStop = False
         Me.grpLogin.Text = "ログイン一覧"
         '
+        'cmbUser
+        '
+        Me.cmbUser.FormattingEnabled = True
+        Me.cmbUser.Items.AddRange(New Object() {"", "dabame8549@mi166.com", "natipo5714@mom2kid.com", "kumyu449@instaddr.win", "mipyagyo@instaddr.win"})
+        Me.cmbUser.Location = New System.Drawing.Point(44, 21)
+        Me.cmbUser.Name = "cmbUser"
+        Me.cmbUser.Size = New System.Drawing.Size(168, 20)
+        Me.cmbUser.TabIndex = 30
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(14, 49)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(30, 12)
+        Me.Label1.TabIndex = 19
+        Me.Label1.Text = "Pass"
+        '
         'grpCommon
         '
+        Me.grpCommon.Controls.Add(Me.Label18)
+        Me.grpCommon.Controls.Add(Me.cmbBrowse)
         Me.grpCommon.Controls.Add(Me.chkTest)
         Me.grpCommon.Controls.Add(Me.chkProd)
         Me.grpCommon.Controls.Add(Me.Label23)
         Me.grpCommon.Controls.Add(Me.imdStartDateTime)
         Me.grpCommon.Controls.Add(Me.Label22)
         Me.grpCommon.Controls.Add(Me.cmbStore)
-        Me.grpCommon.Location = New System.Drawing.Point(406, 157)
+        Me.grpCommon.Location = New System.Drawing.Point(373, 219)
         Me.grpCommon.Margin = New System.Windows.Forms.Padding(2)
         Me.grpCommon.Name = "grpCommon"
         Me.grpCommon.Padding = New System.Windows.Forms.Padding(2)
-        Me.grpCommon.Size = New System.Drawing.Size(332, 107)
+        Me.grpCommon.Size = New System.Drawing.Size(222, 163)
         Me.grpCommon.TabIndex = 32
         Me.grpCommon.TabStop = False
         Me.grpCommon.Text = "共通"
@@ -886,7 +1055,7 @@ Partial Class Form1
         '
         Me.chkTest.AutoSize = True
         Me.chkTest.Checked = True
-        Me.chkTest.Location = New System.Drawing.Point(229, 54)
+        Me.chkTest.Location = New System.Drawing.Point(73, 137)
         Me.chkTest.Margin = New System.Windows.Forms.Padding(2)
         Me.chkTest.Name = "chkTest"
         Me.chkTest.Size = New System.Drawing.Size(49, 16)
@@ -898,7 +1067,7 @@ Partial Class Form1
         'chkProd
         '
         Me.chkProd.AutoSize = True
-        Me.chkProd.Location = New System.Drawing.Point(229, 34)
+        Me.chkProd.Location = New System.Drawing.Point(14, 137)
         Me.chkProd.Margin = New System.Windows.Forms.Padding(2)
         Me.chkProd.Name = "chkProd"
         Me.chkProd.Size = New System.Drawing.Size(47, 16)
@@ -909,7 +1078,7 @@ Partial Class Form1
         'Label23
         '
         Me.Label23.AutoSize = True
-        Me.Label23.Location = New System.Drawing.Point(14, 35)
+        Me.Label23.Location = New System.Drawing.Point(12, 27)
         Me.Label23.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label23.Name = "Label23"
         Me.Label23.Size = New System.Drawing.Size(29, 12)
@@ -920,7 +1089,7 @@ Partial Class Form1
         '
         Me.imdStartDateTime.CustomFormat = "yyyy/MM/dd HH:mm"
         Me.imdStartDateTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.imdStartDateTime.Location = New System.Drawing.Point(46, 32)
+        Me.imdStartDateTime.Location = New System.Drawing.Point(44, 24)
         Me.imdStartDateTime.Margin = New System.Windows.Forms.Padding(2)
         Me.imdStartDateTime.Name = "imdStartDateTime"
         Me.imdStartDateTime.Size = New System.Drawing.Size(138, 19)
@@ -929,7 +1098,7 @@ Partial Class Form1
         'Label22
         '
         Me.Label22.AutoSize = True
-        Me.Label22.Location = New System.Drawing.Point(14, 67)
+        Me.Label22.Location = New System.Drawing.Point(12, 59)
         Me.Label22.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label22.Name = "Label22"
         Me.Label22.Size = New System.Drawing.Size(29, 12)
@@ -938,18 +1107,18 @@ Partial Class Form1
         '
         'cmbStore
         '
+        Me.cmbStore.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbStore.FormattingEnabled = True
         Me.cmbStore.Items.AddRange(New Object() {"ローソン", "ファミリーマート", "クレジットカード"})
-        Me.cmbStore.Location = New System.Drawing.Point(46, 65)
+        Me.cmbStore.Location = New System.Drawing.Point(44, 57)
         Me.cmbStore.Margin = New System.Windows.Forms.Padding(2)
         Me.cmbStore.Name = "cmbStore"
         Me.cmbStore.Size = New System.Drawing.Size(92, 20)
         Me.cmbStore.TabIndex = 0
-        Me.cmbStore.Text = "ファミリーマート"
         '
         'btnReserve
         '
-        Me.btnReserve.Location = New System.Drawing.Point(612, 376)
+        Me.btnReserve.Location = New System.Drawing.Point(469, 386)
         Me.btnReserve.Margin = New System.Windows.Forms.Padding(2)
         Me.btnReserve.Name = "btnReserve"
         Me.btnReserve.Size = New System.Drawing.Size(56, 40)
@@ -959,7 +1128,7 @@ Partial Class Form1
         '
         'btnOpenFolder
         '
-        Me.btnOpenFolder.Location = New System.Drawing.Point(672, 376)
+        Me.btnOpenFolder.Location = New System.Drawing.Point(529, 386)
         Me.btnOpenFolder.Margin = New System.Windows.Forms.Padding(2)
         Me.btnOpenFolder.Name = "btnOpenFolder"
         Me.btnOpenFolder.Size = New System.Drawing.Size(56, 40)
@@ -973,166 +1142,70 @@ Partial Class Form1
         Me.grpURL.Controls.Add(Me.btnGetDisp)
         Me.grpURL.Location = New System.Drawing.Point(11, 12)
         Me.grpURL.Name = "grpURL"
-        Me.grpURL.Size = New System.Drawing.Size(727, 47)
+        Me.grpURL.Size = New System.Drawing.Size(617, 47)
         Me.grpURL.TabIndex = 33
         Me.grpURL.TabStop = False
         Me.grpURL.Text = "URL"
         '
-        'imtAmount1
+        'GroupBox1
         '
-        Me.imtAmount1.Enabled = False
-        Me.imtAmount1.ImeMode = System.Windows.Forms.ImeMode.Off
-        Me.imtAmount1.Location = New System.Drawing.Point(282, 23)
-        Me.imtAmount1.Margin = New System.Windows.Forms.Padding(2)
-        Me.imtAmount1.Name = "imtAmount1"
-        Me.imtAmount1.Size = New System.Drawing.Size(57, 19)
-        Me.imtAmount1.TabIndex = 17
+        Me.GroupBox1.Controls.Add(Me.Label17)
+        Me.GroupBox1.Controls.Add(Me.cmbAnswer)
+        Me.GroupBox1.Location = New System.Drawing.Point(374, 157)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(221, 57)
+        Me.GroupBox1.TabIndex = 35
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "アンケート"
         '
-        'imtAmount2
+        'Label17
         '
-        Me.imtAmount2.Enabled = False
-        Me.imtAmount2.ImeMode = System.Windows.Forms.ImeMode.Off
-        Me.imtAmount2.Location = New System.Drawing.Point(282, 46)
-        Me.imtAmount2.Margin = New System.Windows.Forms.Padding(2)
-        Me.imtAmount2.Name = "imtAmount2"
-        Me.imtAmount2.Size = New System.Drawing.Size(57, 19)
-        Me.imtAmount2.TabIndex = 17
+        Me.Label17.AutoSize = True
+        Me.Label17.Location = New System.Drawing.Point(13, 26)
+        Me.Label17.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(29, 12)
+        Me.Label17.TabIndex = 3
+        Me.Label17.Text = "回答"
         '
-        'imtAmount3
+        'cmbAnswer
         '
-        Me.imtAmount3.Enabled = False
-        Me.imtAmount3.ImeMode = System.Windows.Forms.ImeMode.Off
-        Me.imtAmount3.Location = New System.Drawing.Point(282, 68)
-        Me.imtAmount3.Margin = New System.Windows.Forms.Padding(2)
-        Me.imtAmount3.Name = "imtAmount3"
-        Me.imtAmount3.Size = New System.Drawing.Size(57, 19)
-        Me.imtAmount3.TabIndex = 17
+        Me.cmbAnswer.Cursor = System.Windows.Forms.Cursors.Default
+        Me.cmbAnswer.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbAnswer.FormattingEnabled = True
+        Me.cmbAnswer.Location = New System.Drawing.Point(43, 23)
+        Me.cmbAnswer.Margin = New System.Windows.Forms.Padding(2)
+        Me.cmbAnswer.Name = "cmbAnswer"
+        Me.cmbAnswer.Size = New System.Drawing.Size(168, 20)
+        Me.cmbAnswer.TabIndex = 1
         '
-        'imtAmount4
+        'Label18
         '
-        Me.imtAmount4.Enabled = False
-        Me.imtAmount4.ImeMode = System.Windows.Forms.ImeMode.Off
-        Me.imtAmount4.Location = New System.Drawing.Point(282, 90)
-        Me.imtAmount4.Margin = New System.Windows.Forms.Padding(2)
-        Me.imtAmount4.Name = "imtAmount4"
-        Me.imtAmount4.Size = New System.Drawing.Size(57, 19)
-        Me.imtAmount4.TabIndex = 17
+        Me.Label18.AutoSize = True
+        Me.Label18.Location = New System.Drawing.Point(12, 95)
+        Me.Label18.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(41, 12)
+        Me.Label18.TabIndex = 7
+        Me.Label18.Text = "ブラウザ"
         '
-        'imtAmount5
+        'cmbBrowse
         '
-        Me.imtAmount5.Enabled = False
-        Me.imtAmount5.ImeMode = System.Windows.Forms.ImeMode.Off
-        Me.imtAmount5.Location = New System.Drawing.Point(282, 113)
-        Me.imtAmount5.Margin = New System.Windows.Forms.Padding(2)
-        Me.imtAmount5.Name = "imtAmount5"
-        Me.imtAmount5.Size = New System.Drawing.Size(57, 19)
-        Me.imtAmount5.TabIndex = 17
-        '
-        'imtAmount6
-        '
-        Me.imtAmount6.Enabled = False
-        Me.imtAmount6.ImeMode = System.Windows.Forms.ImeMode.Off
-        Me.imtAmount6.Location = New System.Drawing.Point(282, 135)
-        Me.imtAmount6.Margin = New System.Windows.Forms.Padding(2)
-        Me.imtAmount6.Name = "imtAmount6"
-        Me.imtAmount6.Size = New System.Drawing.Size(57, 19)
-        Me.imtAmount6.TabIndex = 17
-        '
-        'imtAmount7
-        '
-        Me.imtAmount7.Enabled = False
-        Me.imtAmount7.ImeMode = System.Windows.Forms.ImeMode.Off
-        Me.imtAmount7.Location = New System.Drawing.Point(282, 158)
-        Me.imtAmount7.Margin = New System.Windows.Forms.Padding(2)
-        Me.imtAmount7.Name = "imtAmount7"
-        Me.imtAmount7.Size = New System.Drawing.Size(57, 19)
-        Me.imtAmount7.TabIndex = 17
-        '
-        'imtAmount10
-        '
-        Me.imtAmount10.Enabled = False
-        Me.imtAmount10.ImeMode = System.Windows.Forms.ImeMode.Off
-        Me.imtAmount10.Location = New System.Drawing.Point(282, 226)
-        Me.imtAmount10.Margin = New System.Windows.Forms.Padding(2)
-        Me.imtAmount10.Name = "imtAmount10"
-        Me.imtAmount10.Size = New System.Drawing.Size(57, 19)
-        Me.imtAmount10.TabIndex = 17
-        '
-        'imtAmount8
-        '
-        Me.imtAmount8.Enabled = False
-        Me.imtAmount8.ImeMode = System.Windows.Forms.ImeMode.Off
-        Me.imtAmount8.Location = New System.Drawing.Point(282, 181)
-        Me.imtAmount8.Margin = New System.Windows.Forms.Padding(2)
-        Me.imtAmount8.Name = "imtAmount8"
-        Me.imtAmount8.Size = New System.Drawing.Size(57, 19)
-        Me.imtAmount8.TabIndex = 17
-        '
-        'imtAmount11
-        '
-        Me.imtAmount11.Enabled = False
-        Me.imtAmount11.ImeMode = System.Windows.Forms.ImeMode.Off
-        Me.imtAmount11.Location = New System.Drawing.Point(282, 249)
-        Me.imtAmount11.Margin = New System.Windows.Forms.Padding(2)
-        Me.imtAmount11.Name = "imtAmount11"
-        Me.imtAmount11.Size = New System.Drawing.Size(57, 19)
-        Me.imtAmount11.TabIndex = 17
-        '
-        'imtAmount9
-        '
-        Me.imtAmount9.Enabled = False
-        Me.imtAmount9.ImeMode = System.Windows.Forms.ImeMode.Off
-        Me.imtAmount9.Location = New System.Drawing.Point(282, 204)
-        Me.imtAmount9.Margin = New System.Windows.Forms.Padding(2)
-        Me.imtAmount9.Name = "imtAmount9"
-        Me.imtAmount9.Size = New System.Drawing.Size(57, 19)
-        Me.imtAmount9.TabIndex = 17
-        '
-        'imtAmount12
-        '
-        Me.imtAmount12.Enabled = False
-        Me.imtAmount12.ImeMode = System.Windows.Forms.ImeMode.Off
-        Me.imtAmount12.Location = New System.Drawing.Point(282, 271)
-        Me.imtAmount12.Margin = New System.Windows.Forms.Padding(2)
-        Me.imtAmount12.Name = "imtAmount12"
-        Me.imtAmount12.Size = New System.Drawing.Size(57, 19)
-        Me.imtAmount12.TabIndex = 17
-        '
-        'imtAmount13
-        '
-        Me.imtAmount13.Enabled = False
-        Me.imtAmount13.ImeMode = System.Windows.Forms.ImeMode.Off
-        Me.imtAmount13.Location = New System.Drawing.Point(282, 293)
-        Me.imtAmount13.Margin = New System.Windows.Forms.Padding(2)
-        Me.imtAmount13.Name = "imtAmount13"
-        Me.imtAmount13.Size = New System.Drawing.Size(57, 19)
-        Me.imtAmount13.TabIndex = 17
-        '
-        'imtAmount14
-        '
-        Me.imtAmount14.Enabled = False
-        Me.imtAmount14.ImeMode = System.Windows.Forms.ImeMode.Off
-        Me.imtAmount14.Location = New System.Drawing.Point(282, 316)
-        Me.imtAmount14.Margin = New System.Windows.Forms.Padding(2)
-        Me.imtAmount14.Name = "imtAmount14"
-        Me.imtAmount14.Size = New System.Drawing.Size(57, 19)
-        Me.imtAmount14.TabIndex = 17
-        '
-        'imtAmount15
-        '
-        Me.imtAmount15.Enabled = False
-        Me.imtAmount15.ImeMode = System.Windows.Forms.ImeMode.Off
-        Me.imtAmount15.Location = New System.Drawing.Point(282, 338)
-        Me.imtAmount15.Margin = New System.Windows.Forms.Padding(2)
-        Me.imtAmount15.Name = "imtAmount15"
-        Me.imtAmount15.Size = New System.Drawing.Size(57, 19)
-        Me.imtAmount15.TabIndex = 17
+        Me.cmbBrowse.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbBrowse.FormattingEnabled = True
+        Me.cmbBrowse.Items.AddRange(New Object() {"あり", "なし"})
+        Me.cmbBrowse.Location = New System.Drawing.Point(57, 93)
+        Me.cmbBrowse.Margin = New System.Windows.Forms.Padding(2)
+        Me.cmbBrowse.Name = "cmbBrowse"
+        Me.cmbBrowse.Size = New System.Drawing.Size(79, 20)
+        Me.cmbBrowse.TabIndex = 6
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(752, 442)
+        Me.ClientSize = New System.Drawing.Size(603, 438)
+        Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.grpURL)
         Me.Controls.Add(Me.grpCommon)
         Me.Controls.Add(Me.grpLogin)
@@ -1166,6 +1239,8 @@ Partial Class Form1
         Me.grpCommon.PerformLayout()
         Me.grpURL.ResumeLayout(False)
         Me.grpURL.PerformLayout()
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1250,7 +1325,6 @@ Partial Class Form1
     Friend WithEvents imnMaisu15 As NumericUpDown
     Friend WithEvents btnGetDisp As Button
     Friend WithEvents Label21 As Label
-    Friend WithEvents imtUser1 As TextBox
     Friend WithEvents imtPassword1 As TextBox
     Friend WithEvents btnDIspPassword As Button
     Friend WithEvents grpTicket As GroupBox
@@ -1280,4 +1354,11 @@ Partial Class Form1
     Friend WithEvents imtAmount4 As TextBox
     Friend WithEvents imtAmount7 As TextBox
     Friend WithEvents imtAmount1 As TextBox
+    Friend WithEvents Label1 As Label
+    Friend WithEvents cmbUser As ComboBox
+    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents cmbAnswer As ComboBox
+    Friend WithEvents Label17 As Label
+    Friend WithEvents Label18 As Label
+    Friend WithEvents cmbBrowse As ComboBox
 End Class

@@ -2,6 +2,8 @@
 '500円未満はクレカの義務付けチェック
 
 '実行したバッチをkillできるように
+'複数販売時間が存在する場合は、選択肢で選択できるようにしたい
+'アンケートパターンが複数種ある可能性があるので3パターンでチェックする方が良い
 
 
 Imports System.Text
@@ -19,6 +21,10 @@ Public Class Form1
     Public amountList = New List(Of String)
     Public maisuList = New List(Of String)
 
+    'アンケートデータ保持用
+    Public questionIdList = New List(Of String)
+    Public questionTitleList = New List(Of String)
+
     'パスワード表示フラグ
     Public isPasswordVisible = False
 
@@ -30,6 +36,9 @@ Public Class Form1
 
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        cmbStore.Text = "ファミリーマート"
+        cmbBrowse.Text = "あり"
 
         'タイトル変更
         kickId = Now().ToString("yyyyMMddhhmmss")
@@ -50,7 +59,7 @@ Public Class Form1
         setDispData(titleListw, idNameListw, amountListw, maisuListw)
 
         If My.Settings.LoginUser <> "" Then
-            imtUser1.Text = My.Settings.LoginUser
+            cmbUser.Text = My.Settings.LoginUser
         End If
         'imtUser2.Text = "natipo5714@mom2kid.com"
         'imtUser3.Text = "kumyu449@instaddr.win"
@@ -128,6 +137,7 @@ Public Class Form1
         '発売時間取得
         timeNodes = objDOC.DocumentNode.SelectNodes("//*[@id='purchase_form']/section[1]/section/section[1]/p/span[1]")
 
+        Dim startTimeList = New List(Of String)
         For Each node As HtmlAgilityPack.HtmlNode In timeNodes
             Dim startTimeText = node.InnerText
             Dim reg1 As New Regex("\(.+?\)") '()を排除
@@ -137,12 +147,25 @@ Public Class Form1
             Dim startDate = startTimeText.Split(",")(0)
             Dim startTime = startTimeText.Split(",")(1)
 
-            imdStartDateTime.Value = startDate + " " + startTime
+            Dim dispDate = startDate + " " + startTime
+            startTimeList.Add(dispDate)
+
+            imdStartDateTime.Value = dispDate
 
         Next
 
+        If startTimeList.Count() > 1 Then
+            MsgBox("同一ページに販売時間帯が複数存在します。注意してください")
+        End If
+
 
         setDispData(titleList, idNameList, amountList, maisuList)
+
+        'アンケートチェック
+
+        'チェック情報およびバッチ作成、実行
+        writeJsonFile("c")
+
 
     End Sub
 
@@ -362,7 +385,7 @@ Public Class Form1
         My.Settings.amountList = amountListw
         My.Settings.maisuList = maisuListw
 
-        My.Settings.LoginUser = imtUser1.Text
+        My.Settings.LoginUser = cmbUser.Text
         My.Settings.LoginPassword = imtPassword1.Text
 
 
@@ -402,7 +425,7 @@ Public Class Form1
             btnReserve.Enabled = False
 
             '実行用情報およびバッチ作成、実行
-            writeJsonFile()
+            writeJsonFile("k")
 
             'キャンセルおよび終了時処理
             reserveCancel()
@@ -430,7 +453,7 @@ Public Class Form1
 
     End Sub
 
-    Private Sub writeJsonFile()
+    Private Sub writeJsonFile(flg As String)
         Dim enc As Encoding = Encoding.UTF8
         Dim configStr As String = ""
         Dim configFilePath As String = winFolder + "\template\lpkickrun-template.json"
@@ -449,15 +472,40 @@ Public Class Form1
         '【指令ファイル用】
 
         '支払先
-        If cmbStore.SelectedValue = "クレジットカード" Then
+        If cmbStore.Text = "クレジットカード" Then
             configObj.isCredit = True
         Else
             configObj.isCredit = False
-            If cmbStore.SelectedValue = "ファミリーマート" Then
+            If cmbStore.Text = "ファミリーマート" Then
                 configObj.storeTypeId = "016"
             End If
-            If cmbStore.SelectedValue = "ローソン" Then
+            If cmbStore.Text = "ローソン" Then
                 configObj.storeTypeId = "002"
+            End If
+        End If
+
+        'ブラウザ
+        If cmbBrowse.Text = "あり" Then
+            configObj.isBrowse = True
+            configObj.isMobile = True
+        Else
+            configObj.isBrowse = False
+            configObj.isMobile = False
+        End If
+
+        'アンケート回答用
+        If (flg = "k") Then
+            configObj.answerId = ""
+            Dim cnt = 0
+            For Each question As String In questionTitleList
+                If (cmbAnswer.Text = question) Then
+                    configObj.answerId = questionIdList(cnt)
+                End If
+                cnt = cnt + 1
+            Next
+            If (questionTitleList.Count() > 0 And configObj.answerId = "") Then
+                MsgBox("アンケートを選択してください")
+                Exit Sub
             End If
         End If
 
@@ -477,103 +525,137 @@ Public Class Form1
         configObj.endTime = endTime.Replace("/", "-")
 
         '結局ログインユーザは1種類のみとする
-        configObj.confUser = imtUser1.Text
+        configObj.confUser = cmbUser.Text
         configObj.confPass = imtPassword1.Text
 
 
         configObj.targetUrl = imtURL.Text
 
         Dim tikectNameList = New List(Of String)
+        Dim ticketIdList = New List(Of String)
         Dim tikectNumberList = New List(Of String)
         For j As Integer = 1 To 15
             Select Case j
                 Case 1
                     If imtTicketName1.Text <> "" And imnMaisu1.Text >= 1 Then
                         tikectNameList.Add(imtTicketName1.Text)
+                        ticketIdList.Add(imtTicketId1.Text)
                         tikectNumberList.Add(imnMaisu1.Text)
                     End If
                 Case 2
                     If imtTicketName2.Text <> "" And imnMaisu2.Text >= 1 Then
                         tikectNameList.Add(imtTicketName2.Text)
+                        ticketIdList.Add(imtTicketId2.Text)
                         tikectNumberList.Add(imnMaisu2.Text)
                     End If
                 Case 3
                     If imtTicketName3.Text <> "" And imnMaisu3.Text >= 1 Then
                         tikectNameList.Add(imtTicketName3.Text)
+                        ticketIdList.Add(imtTicketId3.Text)
                         tikectNumberList.Add(imnMaisu3.Text)
                     End If
                 Case 4
                     If imtTicketName4.Text <> "" And imnMaisu4.Text >= 1 Then
                         tikectNameList.Add(imtTicketName4.Text)
+                        ticketIdList.Add(imtTicketId4.Text)
                         tikectNumberList.Add(imnMaisu4.Text)
                     End If
                 Case 5
                     If imtTicketName5.Text <> "" And imnMaisu5.Text >= 1 Then
                         tikectNameList.Add(imtTicketName5.Text)
+                        ticketIdList.Add(imtTicketId5.Text)
                         tikectNumberList.Add(imnMaisu5.Text)
                     End If
                 Case 6
                     If imtTicketName6.Text <> "" And imnMaisu6.Text >= 1 Then
                         tikectNameList.Add(imtTicketName6.Text)
+                        ticketIdList.Add(imtTicketId6.Text)
                         tikectNumberList.Add(imnMaisu6.Text)
                     End If
                 Case 7
                     If imtTicketName7.Text <> "" And imnMaisu7.Text >= 1 Then
                         tikectNameList.Add(imtTicketName7.Text)
+                        ticketIdList.Add(imtTicketId7.Text)
                         tikectNumberList.Add(imnMaisu7.Text)
                     End If
                 Case 8
                     If imtTicketName8.Text <> "" And imnMaisu8.Text >= 1 Then
                         tikectNameList.Add(imtTicketName8.Text)
+                        ticketIdList.Add(imtTicketId8.Text)
                         tikectNumberList.Add(imnMaisu8.Text)
                     End If
                 Case 9
                     If imtTicketName9.Text <> "" And imnMaisu9.Text >= 1 Then
                         tikectNameList.Add(imtTicketName9.Text)
+                        ticketIdList.Add(imtTicketId9.Text)
                         tikectNumberList.Add(imnMaisu9.Text)
                     End If
                 Case 10
                     If imtTicketName10.Text <> "" And imnMaisu10.Text >= 1 Then
                         tikectNameList.Add(imtTicketName10.Text)
+                        ticketIdList.Add(imtTicketId10.Text)
                         tikectNumberList.Add(imnMaisu10.Text)
                     End If
                 Case 11
                     If imtTicketName11.Text <> "" And imnMaisu11.Text >= 1 Then
                         tikectNameList.Add(imtTicketName11.Text)
+                        ticketIdList.Add(imtTicketId11.Text)
                         tikectNumberList.Add(imnMaisu11.Text)
                     End If
                 Case 12
                     If imtTicketName12.Text <> "" And imnMaisu12.Text >= 1 Then
                         tikectNameList.Add(imtTicketName12.Text)
+                        ticketIdList.Add(imtTicketId12.Text)
                         tikectNumberList.Add(imnMaisu12.Text)
                     End If
                 Case 13
                     If imtTicketName13.Text <> "" And imnMaisu13.Text >= 1 Then
                         tikectNameList.Add(imtTicketName13.Text)
+                        ticketIdList.Add(imtTicketId13.Text)
                         tikectNumberList.Add(imnMaisu13.Text)
                     End If
                 Case 14
                     If imtTicketName14.Text <> "" And imnMaisu14.Text >= 1 Then
                         tikectNameList.Add(imtTicketName14.Text)
+                        ticketIdList.Add(imtTicketId14.Text)
                         tikectNumberList.Add(imnMaisu14.Text)
                     End If
                 Case 15
                     If imtTicketName15.Text <> "" And imnMaisu15.Text >= 1 Then
                         tikectNameList.Add(imtTicketName15.Text)
+                        ticketIdList.Add(imtTicketId15.Text)
                         tikectNumberList.Add(imnMaisu15.Text)
                     End If
             End Select
         Next
 
-        If tikectNameList.Count() = 0 Then
-            MsgBox("枚数選択されていません")
-            Exit Sub
+        'エラーチェック(Kick時)
+        If flg = "k" Then
+            If tikectNameList.Count() = 0 Then
+                MsgBox("枚数選択されていません")
+                Exit Sub
+            End If
+
+            If cmbUser.Text.Trim() = "" Or imtPassword1.Text.Trim() = "" Then
+                MsgBox("ログインユーザおよびパスワードを設定してください")
+                Exit Sub
+            End If
+
+            '無料対象かどうか
+            configObj.isFree = False
+            For i As Integer = 0 To amountList.Count - 1
+                If amountList(i) = "無料" Then
+                    configObj.isFree = True
+                End If
+            Next
         End If
 
         Dim targetNameArr() As String = tikectNameList.ToArray()
+        Dim targetIdArr() As String = ticketIdList.ToArray()
         Dim targetNumberArr() As String = tikectNumberList.ToArray()
 
         configObj.targetName = String.Join(",", targetNameArr)
+        configObj.targetId = String.Join(",", targetIdArr)
         configObj.targetNumber = String.Join(",", targetNumberArr)
 
 
@@ -593,23 +675,43 @@ Public Class Form1
         configSW.Write(expJsonStr)
         configSW.Close()
 
-        'batファイル作成
-        Dim batFileName = winFolder + "\" + "lpkickrun-" + kickId + "-batch.bat"
-        Dim batSW As System.IO.StreamWriter = System.IO.File.CreateText(batFileName)
-        batSW.WriteLine("title " + kickId)
-        batSW.WriteLine("cd " + nodesFolder)
-        batSW.WriteLine("node lpkickrun " + winFolder + "\" + "lpkickrun-" + kickId + "-config.json")
-        batSW.WriteLine("pause")
-        batSW.Close()
+        Dim batFileName = ""
+
+        If flg = "k" Then
+            'bat(lpkick)ファイル作成
+            batFileName = winFolder + "\" + "lpkickrun-" + kickId + "-batch.bat"
+            Dim batSW As System.IO.StreamWriter = System.IO.File.CreateText(batFileName)
+            batSW.WriteLine("title " + kickId)
+            batSW.WriteLine("cd " + nodesFolder)
+            batSW.WriteLine("node lpkickrun " + winFolder + "\" + "lpkickrun-" + kickId + "-config.json")
+            batSW.WriteLine("pause")
+            batSW.Close()
+        Else
+            'bat(lpcheck)ファイル作成
+            batFileName = winFolder + "\" + "lpcheckrun-" + kickId + "-batch.bat"
+            Dim batSW As System.IO.StreamWriter = System.IO.File.CreateText(batFileName)
+            batSW.WriteLine("title " + kickId)
+            batSW.WriteLine("cd " + nodesFolder)
+            batSW.WriteLine("node lpcheckrun " + winFolder + "\" + "lpkickrun-" + kickId + "-config.json")
+            batSW.Close()
+        End If
 
         'ファイルを開いて終了まで待機する
         Dim p As System.Diagnostics.Process =
             System.Diagnostics.Process.Start(batFileName)
         p.WaitForExit()
 
-        MessageBox.Show("終了しました。" &
+        If flg = "k" Then
+            MessageBox.Show("終了しました。" &
             vbLf & "終了コード:" & p.ExitCode.ToString() &
-            vbLf & "終了時間:" & p.ExitTime.ToString())
+            vbLf & "終了時間:" & p.ExitTime.ToString() &
+            vbLf & "ping:" & getPingData())
+        Else
+            'ワークを読み込んで、存在してれば画面に選択肢を選ばせれるようにし、ワークを消す
+
+            questionDataRead()
+
+        End If
 
 
     End Sub
@@ -639,6 +741,73 @@ Public Class Form1
         Next
     End Sub
 
+    'ping
+    Private Function getPingData()
+        'Pingオブジェクトの作成
+        Dim p As New System.Net.NetworkInformation.Ping()
+        '"www.yahoo.com"にPingを送信する
+        Dim reply As System.Net.NetworkInformation.PingReply = p.Send("t.livepocket.jp")
+
+        Dim res As String
+
+        '結果を取得
+        If reply.Status = System.Net.NetworkInformation.IPStatus.Success Then
+            'res = "Reply from " + reply.Address.ToString() + ":bytes=" + reply.Buffer.Length.ToString() + " time=" + reply.RoundtripTime.ToString() + "ms TTL=" + reply.Options.Ttl.ToString()
+            res = reply.RoundtripTime.ToString() + "ms"
+        Else
+            res = "Ping送信に失敗。(" + reply.Status + ")"
+        End If
+
+        Return res
+
+    End Function
+
+    Private Sub cmbUser_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbUser.SelectedIndexChanged
+        If cmbUser.SelectedIndex > 0 Then
+            imtPassword1.Text = "6yjAWLhCxVT2"
+        Else
+            imtPassword1.Text = ""
+        End If
+    End Sub
+
+    Private Sub questionDataRead()
+        Dim enc As Encoding = Encoding.UTF8
+        'ファイルからJson文字列を読み込む
+        Dim workFilePath As String = nodesFolder + "\work.json"
+        Dim workStr = ""
+        Using sr As New System.IO.StreamReader(workFilePath, enc)
+            workStr = sr.ReadToEnd()
+        End Using
+
+        'Json文字列をJson形式データに復元する
+        Dim workArray = System.Text.Json.Nodes.JsonNode.Parse(workStr).AsArray()
+
+        If workArray.count() > 0 Then
+            Dim id = workArray.Item(0).Item("id").ToString()
+            Dim listArray = workArray.Item(0).Item("list")
+            questionIdList.Clear()
+            questionTitleList.Clear()
+            For Each dataObject As Object In listArray
+                questionIdList.Add(id + "_" + dataObject.Item("id").ToString())
+                questionTitleList.Add(dataObject.Item("title").ToString())
+            Next
+        End If
+
+        cmbAnswer.Items.Clear()
+        If workArray.count() > 0 Then
+            '必要
+            cmbAnswer.Items.Add("<要回答>")
+            cmbAnswer.Text = "<要回答>"
+            For i As Integer = 0 To questionTitleList.Count - 1
+                cmbAnswer.Items.Add(questionTitleList(i))
+            Next
+        Else
+            '不要
+            cmbAnswer.Items.Add("<不要>")
+            cmbAnswer.Text = "<不要>"
+        End If
+
+    End Sub
 End Class
 
 Public Class ConfigJsonClass
@@ -648,16 +817,24 @@ Public Class ConfigJsonClass
     Public Property testPass As String
     Public Property targetUrl As String
     Public Property targetName As String
+    Public Property targetId As String
     Public Property targetNumber As String
+    Public Property answerId As String
     Public Property storeTypeId As String
     Public Property loginTime As String
     Public Property startTime As String
     Public Property endTime As String
     Public Property advSec As Integer
     Public Property isBrowse As Boolean
+    Public Property isMobile As Boolean
     Public Property isTest As Boolean
     Public Property isCredit As Boolean
+    Public Property isFree As Boolean
     Public Property proxy As String
     Public Property proxyUser As String
     Public Property proxyPass As String
+End Class
+
+Public Class ListJsonClass
+    Public Property data As List(Of String)
 End Class
