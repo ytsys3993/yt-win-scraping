@@ -130,7 +130,7 @@ Public Class Form1
             amountList.Add(workInnerText)
         Next
 
-        For index As Integer = 1 To 10
+        For index As Integer = 1 To 20
             maisuList.Add(0)
         Next
 
@@ -181,6 +181,16 @@ Public Class Form1
         imtTicketName8.Text = ""
         imtTicketName9.Text = ""
         imtTicketName10.Text = ""
+        imtTicketName11.Text = ""
+        imtTicketName12.Text = ""
+        imtTicketName13.Text = ""
+        imtTicketName14.Text = ""
+        imtTicketName15.Text = ""
+        imtTicketName16.Text = ""
+        imtTicketName17.Text = ""
+        imtTicketName18.Text = ""
+        imtTicketName19.Text = ""
+        imtTicketName20.Text = ""
 
         imtTicketId1.Text = ""
         imtTicketId2.Text = ""
@@ -192,6 +202,16 @@ Public Class Form1
         imtTicketId8.Text = ""
         imtTicketId9.Text = ""
         imtTicketId10.Text = ""
+        imtTicketId11.Text = ""
+        imtTicketId12.Text = ""
+        imtTicketId13.Text = ""
+        imtTicketId14.Text = ""
+        imtTicketId15.Text = ""
+        imtTicketId16.Text = ""
+        imtTicketId17.Text = ""
+        imtTicketId18.Text = ""
+        imtTicketId19.Text = ""
+        imtTicketId20.Text = ""
 
         imtAmount1.Text = ""
         imtAmount2.Text = ""
@@ -203,17 +223,37 @@ Public Class Form1
         imtAmount8.Text = ""
         imtAmount9.Text = ""
         imtAmount10.Text = ""
+        imtAmount11.Text = ""
+        imtAmount12.Text = ""
+        imtAmount13.Text = ""
+        imtAmount14.Text = ""
+        imtAmount15.Text = ""
+        imtAmount16.Text = ""
+        imtAmount17.Text = ""
+        imtAmount18.Text = ""
+        imtAmount19.Text = ""
+        imtAmount20.Text = ""
 
-        imnMaisu1.Text = ""
-        imnMaisu2.Text = ""
-        imnMaisu3.Text = ""
-        imnMaisu4.Text = ""
-        imnMaisu5.Text = ""
-        imnMaisu6.Text = ""
-        imnMaisu7.Text = ""
-        imnMaisu8.Text = ""
-        imnMaisu9.Text = ""
-        imnMaisu10.Text = ""
+        imnMaisu1.Value = 0
+        imnMaisu2.Value = 0
+        imnMaisu3.Value = 0
+        imnMaisu4.Value = 0
+        imnMaisu5.Value = 0
+        imnMaisu6.Value = 0
+        imnMaisu7.Value = 0
+        imnMaisu8.Value = 0
+        imnMaisu9.Value = 0
+        imnMaisu10.Value = 0
+        imnMaisu11.Value = 0
+        imnMaisu12.Value = 0
+        imnMaisu13.Value = 0
+        imnMaisu14.Value = 0
+        imnMaisu15.Value = 0
+        imnMaisu16.Value = 0
+        imnMaisu17.Value = 0
+        imnMaisu18.Value = 0
+        imnMaisu19.Value = 0
+        imnMaisu20.Value = 0
 
         If titleList IsNot Nothing Then
             For index As Integer = 1 To titleList.Count()
@@ -228,6 +268,16 @@ Public Class Form1
                     Case 8 : imtTicketName8.Text = titleList(index - 1)
                     Case 9 : imtTicketName9.Text = titleList(index - 1)
                     Case 10 : imtTicketName10.Text = titleList(index - 1)
+                    Case 11 : imtTicketName11.Text = titleList(index - 1)
+                    Case 12 : imtTicketName12.Text = titleList(index - 1)
+                    Case 13 : imtTicketName13.Text = titleList(index - 1)
+                    Case 14 : imtTicketName14.Text = titleList(index - 1)
+                    Case 15 : imtTicketName15.Text = titleList(index - 1)
+                    Case 16 : imtTicketName16.Text = titleList(index - 1)
+                    Case 17 : imtTicketName17.Text = titleList(index - 1)
+                    Case 18 : imtTicketName18.Text = titleList(index - 1)
+                    Case 19 : imtTicketName19.Text = titleList(index - 1)
+                    Case 20 : imtTicketName20.Text = titleList(index - 1)
                 End Select
             Next
         End If
@@ -245,6 +295,16 @@ Public Class Form1
                     Case 8 : imtTicketId8.Text = idNameList(index - 1)
                     Case 9 : imtTicketId9.Text = idNameList(index - 1)
                     Case 10 : imtTicketId10.Text = idNameList(index - 1)
+                    Case 11 : imtTicketId11.Text = idNameList(index - 1)
+                    Case 12 : imtTicketId12.Text = idNameList(index - 1)
+                    Case 13 : imtTicketId13.Text = idNameList(index - 1)
+                    Case 14 : imtTicketId14.Text = idNameList(index - 1)
+                    Case 15 : imtTicketId15.Text = idNameList(index - 1)
+                    Case 16 : imtTicketId16.Text = idNameList(index - 1)
+                    Case 17 : imtTicketId17.Text = idNameList(index - 1)
+                    Case 18 : imtTicketId18.Text = idNameList(index - 1)
+                    Case 19 : imtTicketId19.Text = idNameList(index - 1)
+                    Case 20 : imtTicketId20.Text = idNameList(index - 1)
                 End Select
             Next
         End If
@@ -262,23 +322,46 @@ Public Class Form1
                     Case 8 : imtAmount8.Text = amountList(index - 1)
                     Case 9 : imtAmount9.Text = amountList(index - 1)
                     Case 10 : imtAmount10.Text = amountList(index - 1)
+                    Case 11 : imtAmount11.Text = amountList(index - 1)
+                    Case 12 : imtAmount12.Text = amountList(index - 1)
+                    Case 13 : imtAmount13.Text = amountList(index - 1)
+                    Case 14 : imtAmount14.Text = amountList(index - 1)
+                    Case 15 : imtAmount15.Text = amountList(index - 1)
+                    Case 16 : imtAmount16.Text = amountList(index - 1)
+                    Case 17 : imtAmount17.Text = amountList(index - 1)
+                    Case 18 : imtAmount18.Text = amountList(index - 1)
+                    Case 19 : imtAmount19.Text = amountList(index - 1)
+                    Case 20 : imtAmount20.Text = amountList(index - 1)
                 End Select
             Next
         End If
 
         If maisuList IsNot Nothing Then
             For index As Integer = 1 To maisuList.Count()
+                If maisuList(index - 1) = "" Then
+                    maisuList(index - 1) = "0"
+                End If
                 Select Case index
-                    Case 1 : imnMaisu1.Text = maisuList(index - 1)
-                    Case 2 : imnMaisu2.Text = maisuList(index - 1)
-                    Case 3 : imnMaisu3.Text = maisuList(index - 1)
-                    Case 4 : imnMaisu4.Text = maisuList(index - 1)
-                    Case 5 : imnMaisu5.Text = maisuList(index - 1)
-                    Case 6 : imnMaisu6.Text = maisuList(index - 1)
-                    Case 7 : imnMaisu7.Text = maisuList(index - 1)
-                    Case 8 : imnMaisu8.Text = maisuList(index - 1)
-                    Case 9 : imnMaisu9.Text = maisuList(index - 1)
-                    Case 10 : imnMaisu10.Text = maisuList(index - 1)
+                    Case 1 : imnMaisu1.Value = maisuList(index - 1)
+                    Case 2 : imnMaisu2.Value = maisuList(index - 1)
+                    Case 3 : imnMaisu3.Value = maisuList(index - 1)
+                    Case 4 : imnMaisu4.Value = maisuList(index - 1)
+                    Case 5 : imnMaisu5.Value = maisuList(index - 1)
+                    Case 6 : imnMaisu6.Value = maisuList(index - 1)
+                    Case 7 : imnMaisu7.Value = maisuList(index - 1)
+                    Case 8 : imnMaisu8.Value = maisuList(index - 1)
+                    Case 9 : imnMaisu9.Value = maisuList(index - 1)
+                    Case 10 : imnMaisu10.Value = maisuList(index - 1)
+                    Case 11 : imnMaisu11.Value = maisuList(index - 1)
+                    Case 12 : imnMaisu12.Value = maisuList(index - 1)
+                    Case 13 : imnMaisu13.Value = maisuList(index - 1)
+                    Case 14 : imnMaisu14.Value = maisuList(index - 1)
+                    Case 15 : imnMaisu15.Value = maisuList(index - 1)
+                    Case 16 : imnMaisu16.Value = maisuList(index - 1)
+                    Case 17 : imnMaisu17.Value = maisuList(index - 1)
+                    Case 18 : imnMaisu18.Value = maisuList(index - 1)
+                    Case 19 : imnMaisu19.Value = maisuList(index - 1)
+                    Case 20 : imnMaisu20.Value = maisuList(index - 1)
                 End Select
             Next
         End If
@@ -292,7 +375,7 @@ Public Class Form1
         Dim amountListw = New List(Of String)
         Dim maisuListw = New List(Of String)
 
-        For index As Integer = 1 To 15
+        For index As Integer = 1 To 20
             titleListw.Add("")
             Select Case index
                 Case 1 : titleListw(index - 1) = imtTicketName1.Text
@@ -310,10 +393,15 @@ Public Class Form1
                 Case 13 : titleListw(index - 1) = imtTicketName13.Text
                 Case 14 : titleListw(index - 1) = imtTicketName14.Text
                 Case 15 : titleListw(index - 1) = imtTicketName15.Text
+                Case 16 : titleListw(index - 1) = imtTicketName16.Text
+                Case 17 : titleListw(index - 1) = imtTicketName17.Text
+                Case 18 : titleListw(index - 1) = imtTicketName18.Text
+                Case 19 : titleListw(index - 1) = imtTicketName19.Text
+                Case 20 : titleListw(index - 1) = imtTicketName20.Text
             End Select
         Next
 
-        For index As Integer = 1 To 15
+        For index As Integer = 1 To 20
             idNameListw.Add("")
             Select Case index
                 Case 1 : idNameListw(index - 1) = imtTicketId1.Text
@@ -331,10 +419,15 @@ Public Class Form1
                 Case 13 : idNameListw(index - 1) = imtTicketId13.Text
                 Case 14 : idNameListw(index - 1) = imtTicketId14.Text
                 Case 15 : idNameListw(index - 1) = imtTicketId15.Text
+                Case 16 : idNameListw(index - 1) = imtTicketId16.Text
+                Case 17 : idNameListw(index - 1) = imtTicketId17.Text
+                Case 18 : idNameListw(index - 1) = imtTicketId18.Text
+                Case 19 : idNameListw(index - 1) = imtTicketId19.Text
+                Case 20 : idNameListw(index - 1) = imtTicketId20.Text
             End Select
         Next
 
-        For index As Integer = 1 To 15
+        For index As Integer = 1 To 20
             amountListw.Add("")
             Select Case index
                 Case 1 : amountListw(index - 1) = imtAmount1.Text
@@ -352,27 +445,37 @@ Public Class Form1
                 Case 13 : amountListw(index - 1) = imtAmount13.Text
                 Case 14 : amountListw(index - 1) = imtAmount14.Text
                 Case 15 : amountListw(index - 1) = imtAmount15.Text
+                Case 16 : amountListw(index - 1) = imtAmount16.Text
+                Case 17 : amountListw(index - 1) = imtAmount17.Text
+                Case 18 : amountListw(index - 1) = imtAmount18.Text
+                Case 19 : amountListw(index - 1) = imtAmount19.Text
+                Case 20 : amountListw(index - 1) = imtAmount20.Text
             End Select
         Next
 
-        For index As Integer = 1 To 15
+        For index As Integer = 1 To 20
             maisuListw.Add("")
             Select Case index
-                Case 1 : maisuListw(index - 1) = imnMaisu1.Text
-                Case 2 : maisuListw(index - 1) = imnMaisu2.Text
-                Case 3 : maisuListw(index - 1) = imnMaisu3.Text
-                Case 4 : maisuListw(index - 1) = imnMaisu4.Text
-                Case 5 : maisuListw(index - 1) = imnMaisu5.Text
-                Case 6 : maisuListw(index - 1) = imnMaisu6.Text
-                Case 7 : maisuListw(index - 1) = imnMaisu7.Text
-                Case 8 : maisuListw(index - 1) = imnMaisu8.Text
-                Case 9 : maisuListw(index - 1) = imnMaisu9.Text
-                Case 10 : maisuListw(index - 1) = imnMaisu10.Text
-                Case 11 : maisuListw(index - 1) = imnMaisu11.Text
-                Case 12 : maisuListw(index - 1) = imnMaisu12.Text
-                Case 13 : maisuListw(index - 1) = imnMaisu13.Text
-                Case 14 : maisuListw(index - 1) = imnMaisu14.Text
-                Case 15 : maisuListw(index - 1) = imnMaisu15.Text
+                Case 1 : maisuListw(index - 1) = imnMaisu1.Value
+                Case 2 : maisuListw(index - 1) = imnMaisu2.Value
+                Case 3 : maisuListw(index - 1) = imnMaisu3.Value
+                Case 4 : maisuListw(index - 1) = imnMaisu4.Value
+                Case 5 : maisuListw(index - 1) = imnMaisu5.Value
+                Case 6 : maisuListw(index - 1) = imnMaisu6.Value
+                Case 7 : maisuListw(index - 1) = imnMaisu7.Value
+                Case 8 : maisuListw(index - 1) = imnMaisu8.Value
+                Case 9 : maisuListw(index - 1) = imnMaisu9.Value
+                Case 10 : maisuListw(index - 1) = imnMaisu10.Value
+                Case 11 : maisuListw(index - 1) = imnMaisu11.Value
+                Case 12 : maisuListw(index - 1) = imnMaisu12.Value
+                Case 13 : maisuListw(index - 1) = imnMaisu13.Value
+                Case 14 : maisuListw(index - 1) = imnMaisu14.Value
+                Case 15 : maisuListw(index - 1) = imnMaisu15.Value
+                Case 16 : maisuListw(index - 1) = imnMaisu16.Value
+                Case 17 : maisuListw(index - 1) = imnMaisu17.Value
+                Case 18 : maisuListw(index - 1) = imnMaisu18.Value
+                Case 19 : maisuListw(index - 1) = imnMaisu19.Value
+                Case 20 : maisuListw(index - 1) = imnMaisu20.Value
             End Select
         Next
 
@@ -416,19 +519,8 @@ Public Class Form1
         If result = DialogResult.Yes Then
             '「はい」が選択された時 
 
-            '予約のために操作不能に
-            grpURL.Enabled = False
-            grpTicket.Enabled = False
-            grpLogin.Enabled = False
-            grpCommon.Enabled = False
-
-            btnReserve.Enabled = False
-
             '実行用情報およびバッチ作成、実行
             writeJsonFile("k")
-
-            'キャンセルおよび終了時処理
-            reserveCancel()
 
         ElseIf result = DialogResult.No Then
             '「いいえ」が選択された時 
@@ -438,7 +530,22 @@ Public Class Form1
 
     End Sub
 
-    Private Sub reserveCancel()
+    Private Sub loadingStart(msg As String)
+
+        lblProgress.Text = msg + "..."
+
+        '予約のために操作不能に
+        grpURL.Enabled = False
+        grpTicket.Enabled = False
+        grpLogin.Enabled = False
+        grpCommon.Enabled = False
+
+        btnReserve.Enabled = False
+
+
+    End Sub
+
+    Private Sub loadingEnd()
 
         'キャンセルのために操作可能に
         grpURL.Enabled = True
@@ -448,12 +555,21 @@ Public Class Form1
 
         btnReserve.Enabled = True
 
+        lblProgress.Text = ""
+
         '実行用情報およびバッチ削除
         deleteReserveData()
 
     End Sub
 
     Private Sub writeJsonFile(flg As String)
+
+        If flg = "k" Then
+            loadingStart("予約実行中")
+        Else
+            loadingStart("取込中")
+        End If
+
         Dim enc As Encoding = Encoding.UTF8
         Dim configStr As String = ""
         Dim configFilePath As String = winFolder + "\template\lpkickrun-template.json"
@@ -466,10 +582,8 @@ Public Class Form1
         'Json文字列をJson形式データに復元する
         Dim configObj As ConfigJsonClass = JsonSerializer.Deserialize(Of ConfigJsonClass)(configStr)
 
-        '【共通ファイル用】
+        configObj.logName = kickId
         configObj.isTest = chkTest.Checked
-
-        '【指令ファイル用】
 
         '支払先
         If cmbStore.Text = "クレジットカード" Then
@@ -505,7 +619,7 @@ Public Class Form1
             Next
             If (questionTitleList.Count() > 0 And configObj.answerId = "") Then
                 MsgBox("アンケートを選択してください")
-                Exit Sub
+                GoTo funcEnd
             End If
         End If
 
@@ -534,97 +648,127 @@ Public Class Form1
         Dim tikectNameList = New List(Of String)
         Dim ticketIdList = New List(Of String)
         Dim tikectNumberList = New List(Of String)
-        For j As Integer = 1 To 15
+        For j As Integer = 1 To 20
             Select Case j
                 Case 1
-                    If imtTicketName1.Text <> "" And imnMaisu1.Text >= 1 Then
+                    If imtTicketName1.Text <> "" And imnMaisu1.Value >= 1 Then
                         tikectNameList.Add(imtTicketName1.Text)
                         ticketIdList.Add(imtTicketId1.Text)
-                        tikectNumberList.Add(imnMaisu1.Text)
+                        tikectNumberList.Add(imnMaisu1.Value)
                     End If
                 Case 2
-                    If imtTicketName2.Text <> "" And imnMaisu2.Text >= 1 Then
+                    If imtTicketName2.Text <> "" And imnMaisu2.Value >= 1 Then
                         tikectNameList.Add(imtTicketName2.Text)
                         ticketIdList.Add(imtTicketId2.Text)
-                        tikectNumberList.Add(imnMaisu2.Text)
+                        tikectNumberList.Add(imnMaisu2.Value)
                     End If
                 Case 3
-                    If imtTicketName3.Text <> "" And imnMaisu3.Text >= 1 Then
+                    If imtTicketName3.Text <> "" And imnMaisu3.Value >= 1 Then
                         tikectNameList.Add(imtTicketName3.Text)
                         ticketIdList.Add(imtTicketId3.Text)
-                        tikectNumberList.Add(imnMaisu3.Text)
+                        tikectNumberList.Add(imnMaisu3.Value)
                     End If
                 Case 4
-                    If imtTicketName4.Text <> "" And imnMaisu4.Text >= 1 Then
+                    If imtTicketName4.Text <> "" And imnMaisu4.Value >= 1 Then
                         tikectNameList.Add(imtTicketName4.Text)
                         ticketIdList.Add(imtTicketId4.Text)
-                        tikectNumberList.Add(imnMaisu4.Text)
+                        tikectNumberList.Add(imnMaisu4.Value)
                     End If
                 Case 5
-                    If imtTicketName5.Text <> "" And imnMaisu5.Text >= 1 Then
+                    If imtTicketName5.Text <> "" And imnMaisu5.Value >= 1 Then
                         tikectNameList.Add(imtTicketName5.Text)
                         ticketIdList.Add(imtTicketId5.Text)
-                        tikectNumberList.Add(imnMaisu5.Text)
+                        tikectNumberList.Add(imnMaisu5.Value)
                     End If
                 Case 6
-                    If imtTicketName6.Text <> "" And imnMaisu6.Text >= 1 Then
+                    If imtTicketName6.Text <> "" And imnMaisu6.Value >= 1 Then
                         tikectNameList.Add(imtTicketName6.Text)
                         ticketIdList.Add(imtTicketId6.Text)
-                        tikectNumberList.Add(imnMaisu6.Text)
+                        tikectNumberList.Add(imnMaisu6.Value)
                     End If
                 Case 7
-                    If imtTicketName7.Text <> "" And imnMaisu7.Text >= 1 Then
+                    If imtTicketName7.Text <> "" And imnMaisu7.Value >= 1 Then
                         tikectNameList.Add(imtTicketName7.Text)
                         ticketIdList.Add(imtTicketId7.Text)
-                        tikectNumberList.Add(imnMaisu7.Text)
+                        tikectNumberList.Add(imnMaisu7.Value)
                     End If
                 Case 8
-                    If imtTicketName8.Text <> "" And imnMaisu8.Text >= 1 Then
+                    If imtTicketName8.Text <> "" And imnMaisu8.Value >= 1 Then
                         tikectNameList.Add(imtTicketName8.Text)
                         ticketIdList.Add(imtTicketId8.Text)
-                        tikectNumberList.Add(imnMaisu8.Text)
+                        tikectNumberList.Add(imnMaisu8.Value)
                     End If
                 Case 9
-                    If imtTicketName9.Text <> "" And imnMaisu9.Text >= 1 Then
+                    If imtTicketName9.Text <> "" And imnMaisu9.Value >= 1 Then
                         tikectNameList.Add(imtTicketName9.Text)
                         ticketIdList.Add(imtTicketId9.Text)
-                        tikectNumberList.Add(imnMaisu9.Text)
+                        tikectNumberList.Add(imnMaisu9.Value)
                     End If
                 Case 10
-                    If imtTicketName10.Text <> "" And imnMaisu10.Text >= 1 Then
+                    If imtTicketName10.Text <> "" And imnMaisu10.Value >= 1 Then
                         tikectNameList.Add(imtTicketName10.Text)
                         ticketIdList.Add(imtTicketId10.Text)
-                        tikectNumberList.Add(imnMaisu10.Text)
+                        tikectNumberList.Add(imnMaisu10.Value)
                     End If
                 Case 11
-                    If imtTicketName11.Text <> "" And imnMaisu11.Text >= 1 Then
+                    If imtTicketName11.Text <> "" And imnMaisu11.Value >= 1 Then
                         tikectNameList.Add(imtTicketName11.Text)
                         ticketIdList.Add(imtTicketId11.Text)
-                        tikectNumberList.Add(imnMaisu11.Text)
+                        tikectNumberList.Add(imnMaisu11.Value)
                     End If
                 Case 12
-                    If imtTicketName12.Text <> "" And imnMaisu12.Text >= 1 Then
+                    If imtTicketName12.Text <> "" And imnMaisu12.Value >= 1 Then
                         tikectNameList.Add(imtTicketName12.Text)
                         ticketIdList.Add(imtTicketId12.Text)
-                        tikectNumberList.Add(imnMaisu12.Text)
+                        tikectNumberList.Add(imnMaisu12.Value)
                     End If
                 Case 13
-                    If imtTicketName13.Text <> "" And imnMaisu13.Text >= 1 Then
+                    If imtTicketName13.Text <> "" And imnMaisu13.Value >= 1 Then
                         tikectNameList.Add(imtTicketName13.Text)
                         ticketIdList.Add(imtTicketId13.Text)
-                        tikectNumberList.Add(imnMaisu13.Text)
+                        tikectNumberList.Add(imnMaisu13.Value)
                     End If
                 Case 14
-                    If imtTicketName14.Text <> "" And imnMaisu14.Text >= 1 Then
+                    If imtTicketName14.Text <> "" And imnMaisu14.Value >= 1 Then
                         tikectNameList.Add(imtTicketName14.Text)
                         ticketIdList.Add(imtTicketId14.Text)
-                        tikectNumberList.Add(imnMaisu14.Text)
+                        tikectNumberList.Add(imnMaisu14.Value)
                     End If
                 Case 15
-                    If imtTicketName15.Text <> "" And imnMaisu15.Text >= 1 Then
+                    If imtTicketName15.Text <> "" And imnMaisu15.Value >= 1 Then
                         tikectNameList.Add(imtTicketName15.Text)
                         ticketIdList.Add(imtTicketId15.Text)
-                        tikectNumberList.Add(imnMaisu15.Text)
+                        tikectNumberList.Add(imnMaisu15.Value)
+                    End If
+                Case 16
+                    If imtTicketName16.Text <> "" And imnMaisu16.Value >= 1 Then
+                        tikectNameList.Add(imtTicketName16.Text)
+                        ticketIdList.Add(imtTicketId16.Text)
+                        tikectNumberList.Add(imnMaisu16.Value)
+                    End If
+                Case 17
+                    If imtTicketName17.Text <> "" And imnMaisu17.Value >= 1 Then
+                        tikectNameList.Add(imtTicketName17.Text)
+                        ticketIdList.Add(imtTicketId17.Text)
+                        tikectNumberList.Add(imnMaisu17.Value)
+                    End If
+                Case 18
+                    If imtTicketName18.Text <> "" And imnMaisu18.Value >= 1 Then
+                        tikectNameList.Add(imtTicketName18.Text)
+                        ticketIdList.Add(imtTicketId18.Text)
+                        tikectNumberList.Add(imnMaisu18.Value)
+                    End If
+                Case 19
+                    If imtTicketName19.Text <> "" And imnMaisu19.Value >= 1 Then
+                        tikectNameList.Add(imtTicketName19.Text)
+                        ticketIdList.Add(imtTicketId19.Text)
+                        tikectNumberList.Add(imnMaisu19.Value)
+                    End If
+                Case 20
+                    If imtTicketName20.Text <> "" And imnMaisu20.Value >= 1 Then
+                        tikectNameList.Add(imtTicketName20.Text)
+                        ticketIdList.Add(imtTicketId20.Text)
+                        tikectNumberList.Add(imnMaisu20.Value)
                     End If
             End Select
         Next
@@ -633,12 +777,12 @@ Public Class Form1
         If flg = "k" Then
             If tikectNameList.Count() = 0 Then
                 MsgBox("枚数選択されていません")
-                Exit Sub
+                GoTo funcEnd
             End If
 
             If cmbUser.Text.Trim() = "" Or imtPassword1.Text.Trim() = "" Then
                 MsgBox("ログインユーザおよびパスワードを設定してください")
-                Exit Sub
+                GoTo funcEnd
             End If
 
             '無料対象かどうか
@@ -681,6 +825,7 @@ Public Class Form1
             'bat(lpkick)ファイル作成
             batFileName = winFolder + "\" + "lpkickrun-" + kickId + "-batch.bat"
             Dim batSW As System.IO.StreamWriter = System.IO.File.CreateText(batFileName)
+            batSW.WriteLine("mode 90,20")
             batSW.WriteLine("title " + kickId)
             batSW.WriteLine("cd " + nodesFolder)
             batSW.WriteLine("node lpkickrun " + winFolder + "\" + "lpkickrun-" + kickId + "-config.json")
@@ -696,23 +841,28 @@ Public Class Form1
             batSW.Close()
         End If
 
+        Dim psInfo As New ProcessStartInfo()
+        psInfo.FileName = batFileName ' 実行するファイル
+        If flg = "c" Then
+            psInfo.CreateNoWindow = True ' コンソール・ウィンドウを開かない
+            psInfo.UseShellExecute = False ' シェル機能を使用しない
+        End If
         'ファイルを開いて終了まで待機する
-        Dim p As System.Diagnostics.Process =
-            System.Diagnostics.Process.Start(batFileName)
+        Dim p As System.Diagnostics.Process = System.Diagnostics.Process.Start(psInfo)
         p.WaitForExit()
 
         If flg = "k" Then
-            MessageBox.Show("終了しました。" &
-            vbLf & "終了コード:" & p.ExitCode.ToString() &
-            vbLf & "終了時間:" & p.ExitTime.ToString() &
-            vbLf & "ping:" & getPingData())
+            lblProgress.Text = "終了しました。"
+            resultDataRead()
         Else
             'ワークを読み込んで、存在してれば画面に選択肢を選ばせれるようにし、ワークを消す
-
             questionDataRead()
-
         End If
 
+funcEnd:
+
+        'キャンセルおよび終了時処理
+        loadingEnd()
 
     End Sub
 
@@ -808,9 +958,30 @@ Public Class Form1
         End If
 
     End Sub
+
+
+    Private Sub resultDataRead()
+        Dim enc As Encoding = Encoding.UTF8
+        'ファイルからJson文字列を読み込む
+        Dim workFilePath As String = nodesFolder + "\" + kickId + "-result.txt"
+        Dim sr As New System.IO.StreamReader(workFilePath, enc)
+        imtResult.Text = ""
+        'ストリームの末端まで繰り返す
+        While sr.Peek() > -1
+            '一行読み込んで表示する
+            imtResult.Text = imtResult.Text & sr.ReadLine() & vbCrLf
+        End While
+
+        sr.Close()
+
+        '読込終わったら削除
+        System.IO.File.Delete(workFilePath)
+
+    End Sub
 End Class
 
 Public Class ConfigJsonClass
+    Public Property logName As String
     Public Property confUser As String
     Public Property confPass As String
     Public Property testUser As String

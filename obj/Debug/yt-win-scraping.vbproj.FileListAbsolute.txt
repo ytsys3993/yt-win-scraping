@@ -33,4 +33,3 @@ C:\Users\hamaguchi\Source\Repos\yt-win-scraping\bin\Debug\yt-win-scraping.exe.ma
 C:\Users\hamaguchi\Source\Repos\yt-win-scraping\bin\Debug\yt-win-scraping.application
 C:\Users\hamaguchi\Source\Repos\yt-win-scraping\obj\Debug\yt-win-scraping.exe.manifest
 C:\Users\hamaguchi\Source\Repos\yt-win-scraping\obj\Debug\yt-win-scraping.application
-C:\Users\hamaguchi\Source\Repos\yt-win-scraping\obj\Debug\yt-win-scraping.vbproj.AssemblyReference.cache

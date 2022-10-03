@@ -163,14 +163,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="yt-win-scraping.exe" size="485336">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="yt-win-scraping.exe" size="500696">
       <assemblyIdentity name="yt-win-scraping" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>uVoXmeZWT9Fq5r5J0pfRI23uPpocQAYcQEKnC9B/0Dw=</dsig:DigestValue>
+        <dsig:DigestValue>5C3fUjFTh/LhY1kCLosVJSn6xKsYhQz94I8fbXpsiOg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
